@@ -1,0 +1,753 @@
+GRW_defense_of_the_revolution = {
+	grw_push_mission = {
+ 	   activation = {
+    	    has_war_with = BRF
+    	}
+
+    	available = {
+        	has_completed_focus = GRW_lets_finish_this
+        	has_war = yes
+    	}
+
+    	cancel_trigger = {
+        	has_war = no
+    	}
+
+    	icon = mission_icon     # For GFX_decision_mission_icon
+    	is_good = yes
+    	days_mission_timeout = 160
+    	selectable_mission = yes
+
+    	complete_effect = {
+       	 add_timed_idea = { idea = grw_the_great_push days = 75 }
+    	}
+    	timeout_effect = {
+    	   add_timed_idea = { idea = grw_stupid_cowards days = 75 }
+    	}
+	}
+}
+GRW_food_problem = {
+ grw_famine_mission = {
+ activation = {
+ has_idea = Risk_Of_Famine
+              }
+	available = {}
+	cancel_trigger = {}
+	days_mission_timeout = 200
+	complete_effect = {}
+			 timeout_effect = {
+    	   add_idea = { idea = Risk_Of_Famine_2 }
+    	} 
+    }
+}
+Prywhen_civil_war  = {
+	Theresa_smuggle = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 10
+
+       days_remove = 7
+		
+        complete_effect = {	
+          country_event = { id = prywhen.4 days=1}
+		hidden_effect = {
+		set_country_flag = GRW_doing_war_stuff
+		}  
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	petition_Republican_support = {		
+
+		icon = GFX_decision_megaphone	
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 10
+
+       days_remove = 10
+		
+        complete_effect = {	
+          add_add_political_power = 45
+		  add_war_support= 0.05
+		   add_popularity = {
+		            ideology = neutrality
+                    popularity = 0.04
+					}
+		hidden_effect = {
+		set_country_flag = GRW_doing_war_stuff
+		}  
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Give_V_regiment_combat_roles = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 15	
+		
+       days_remove = 15
+
+	complete_effect = {	
+	 custom_effect_tooltip = GRW_Theresa_finest
+     add_popularity = {
+		            ideology = fascism
+                    popularity = 0.08
+					}
+	hidden_effect = {
+	set_country_flag = GRW_doing_war_stuff
+    division_template = {
+						name = "V regiment"
+						priority = 2
+						is_locked = no
+						regiments = {
+							knights = { x = 0 y = 0 }
+							knights = { x = 0 y = 1 }
+							knights = { x = 0 y = 2 }
+							knights = { x = 0 y = 3 }
+							knights = { x = 0 y = 4 }
+							knights = { x = 1 y = 0 }
+							knights = { x = 1 y = 1 }
+							knights = { x = 1 y = 2 }
+							knights = { x = 1 y = 3 }
+							knights = { x = 1 y = 4 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+						}
+					}
+				588 = {
+					create_unit = {
+						division = "name = \"V Regiment\" division_template = \"V regiment\" start_experience_factor = 1 start_equipment_factor = 0.9" 
+						owner = GRW
+				    }
+		}
+	}	
+	}
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Seek-aid_from_the_riverlands = {		
+
+		icon = GFX_decision_rifles
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 25	
+		
+       days_remove = 15
+
+		complete_effect = {	
+         add_popularity = {
+		            ideology = communism
+                    popularity = 0.03
+					}
+		 add_popularity = {
+		            ideology = democratic
+                    popularity = 0.05
+					}
+		add_equipment_to_stockpile = {
+        type = infantry_equipment
+        amount = 500
+        producer = RCT
+        }   			
+		hidden_effect = {
+		set_country_flag = GRW_doing_war_stuff
+		}
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Seize_property = {		
+
+		icon = GFX_decision_hammer_and_horseshoe_decision	
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 25	
+		
+       days_remove = 10
+
+		complete_effect = {	
+        add_popularity = {
+		            ideology = communism
+                    popularity = -0.05
+					}
+		add_stability  = -0.05			
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+	
+		hidden_effect = {
+
+		set_country_flag = GRW_doing_war_stuff
+		}
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Pirates_cooperation = {		
+
+		icon = GFX_decision_generic_merge_plant_ship		
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 10
+
+       days_remove = 15
+		
+        complete_effect = {	
+          add_equipment_to_stockpile = {
+          type = convoy
+          amount = 50
+        }
+        add_popularity = {
+		            ideology = neutrality
+                    popularity = 0.095
+					}
+		custom_effect_tooltip = GRW_raise_pirates
+		hidden_effect = {
+		 division_template = {
+						name = "Pirates"
+						priority = 2
+						is_locked = no
+						regiments = {
+							marine = { x = 0 y = 0 }
+							marine = { x = 0 y = 1 }
+							marine = { x = 0 y = 2 }
+							marine = { x = 0 y = 3 }
+							marine = { x = 1 y = 0 }
+							marine = { x = 1 y = 1 }
+							marine = { x = 1 y = 2 }
+							marine = { x = 1 y = 3 }
+						}
+						support = {
+						
+							artillery = { x = 0 y = 2 }
+						}
+					}
+				588 = {
+					create_unit = {
+						division = "name = \"Pirates\" division_template = \"Pirates\" start_experience_factor = 0.5 start_equipment_factor = 0.6" 
+						owner = GRW
+				    }
+		}	
+		set_country_flag = GRW_doing_war_stuff
+		}  
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+		Speer_connection = {		
+
+		icon = GFX_decision_jachs_drawer	
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 10
+
+       days_remove = 15
+		
+		complete_effect = {
+         add_popularity = {
+		            ideology = neutrality
+                    popularity = 0.085
+		add_popularity = {
+		            ideology = communism
+                    popularity = 0.04
+					}
+		add_stability  = -0.05			
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		hidden_effect = {
+
+		set_country_flag = GRW_doing_war_stuff
+		}
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	}
+	Internationalist_support = {		
+
+		icon = GFX_decision_category_hammer_and_horseshoe	
+		
+	
+		
+		available = {
+		custom_trigger_tooltip = {
+				tooltip = GLA_instability
+				NOT= {has_country_flag = GRW_doing_war_stuff}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 10
+
+       days_remove = 7
+		
+        complete_effect = {	
+          add_add_political_power= -30
+		  add_manpower = 10000
+		   add_popularity = {
+		            ideology = neutrality
+                    popularity = 0.02
+					}
+		add_stability= -0.02			
+		hidden_effect = {
+		set_country_flag = GRW_doing_war_stuff
+		}  
+		}
+		
+		remove_effect = {
+		clr_country_flag = GRW_doing_war_stuff
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+}
+
+Theresa_buffer_state = {
+	Secure_southern_riverlands = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+		
+		}
+		
+		fire_only_once = yes
+
+		visible = {		
+				
+		}		
+
+		cost = 50
+
+       days_remove = 15
+		
+        complete_effect = {	
+          add_war_support = 0.05
+		
+		}
+		
+		remove_effect = {
+		create_wargoal = {
+         type = annex_everything
+         target = BAR
+        }
+		create_wargoal = {
+         type = annex_everything
+         target = ZES
+        }
+		}
+
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Further_expand_evi_boundries = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+	    
+
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+	    ROOT = {
+		owns_state  =624
+		owns_state  =625
+        owns_state  =626
+	    owns_state  =558
+	    owns_state  =578
+	    owns_state  =413
+		owns_state  =680
+		}
+		}		
+
+		cost = 25
+
+       days_remove = 30
+		
+        complete_effect = {	
+		
+		}
+		
+		remove_effect = {
+		558= { add_manpower = -1000 add_compliance = 30 add_extra_state_shared_building_slots = 1	}
+		680= { add_manpower = -2500 add_compliance = 30 add_extra_state_shared_building_slots = 1	}
+		413= { add_manpower = -3000 add_compliance = 30 add_extra_state_shared_building_slots = 1	}
+		578= { add_manpower = -1500 add_compliance = 30 add_extra_state_shared_building_slots = 1	}
+		release_puppet = BAR
+			BAR = {
+				set_cosmetic_tag = BAR_SSR
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+					add_popularity = { 
+				ideology = communism
+				popularity = 0.5
+			    }
+				add_ideas = WNG_the_southern_utopia
+		}
+        }
+		
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	Lake_city_ssr = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+	    
+
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+	    ROOT = {
+		owns_state  =499
+		owns_state  =551
+        owns_state  =550
+	    owns_state  =387
+	    owns_state  =541
+	    owns_state  =560
+		}
+		}		
+
+		cost = 25
+
+       days_remove = 30
+		
+        complete_effect = {	
+		
+		}
+		
+		remove_effect = {
+		release_puppet = LCT
+			LCT = {
+				set_cosmetic_tag = LCT_SSR
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+					add_popularity = { 
+				ideology = communism
+				popularity = 0.5
+			    }
+		}
+        }
+		
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	strike_wittenland = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+	    NOT= { WIT = {
+        is_in_faction_with = RCT}
+		}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+	     WIT= { exists= yes	}	
+		}		
+
+		cost = 25
+
+       days_remove = 30
+		
+        complete_effect = {	
+		
+		}
+		
+		remove_effect = {
+	    create_wargoal = {
+         type = annex_everything
+         target = WIT
+        }
+		}
+		
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+	expand_barrad_ssr = {		
+
+		icon = GFX_decision_decision_repression		
+		
+	
+		
+		available = {
+	    BAR= {is_subject_of = ROOT	}
+
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+	    ROOT = {
+		owns_state  =627
+		owns_state  =628
+        owns_state  =629
+	    owns_state  =614
+	    owns_state  =615
+	    owns_state  =616
+		owns_state  =617
+		}
+		}		
+
+		cost = 25
+
+       days_remove = 30
+		
+        complete_effect = {	
+		
+		}
+		
+		remove_effect = {
+		every_owned_state = {
+					limit = {
+						is_core_of = WIT
+					}
+					BAR = {
+						transfer_state = PREV
+					}
+				add_core_of = BAR	
+				}
+		}
+		
+		ai_will_do = {	#Modifiers for the AI to decide when to execute the decision.
+			factor = 0
+		}
+	}
+}
+  
+Pirate_Expansion = { 
+
+
+}
+   

@@ -1,0 +1,27 @@
+﻿l_english:
+#categories
+Prywhen_civil_war:0 "The Prywhen Civil War"
+
+#decisions
+Prywhen_civil_war_desc:0 "With our forces on the offence, there are still many things left to be done. The flame of Revolution burns bright, but fire easily grows out of control.\n We must ensure that the Liberation Army remains stable, lest we want it to collapse into Civil War once more.\n"
+Theresa_smuggle:0 "Herzlandish benefactors"
+Theresa_smuggle_desc:0 "The Herzland is the heart of Griffonian imperialism, and with very little socialist or even republican presence, our chance of recieving help from them is very low, but we have to try if we want to be prepared for final push."
+Give_V_regiment_combat_roles:0 "Increase V Regiment's power"
+Give_V_regiment_combat_roles_desc:0 "V Regiment is Theresa's handy work, this regiments were trained under Theresa herself, they by far are the most professional soldiers in the whole GLA, even international brigades from Stalliongrad can't compare to them, providing them guns and plenty of resources gives them enough power to push the monarchists all the way to the sea."
+Seek-aid_from_the_riverlands:0 "Seek aid from the Riverlands"
+Seek-aid_from_the_riverlands_desc:0 "Despite not having a major presence in the Riverlands, socialist groups in the Riverlands have a presence in Wittenland and the River Republic, especially the River latter. It would be a wise move to ask them for aid in our struggle against the Tyrant King."
+Seize_property:0 "Seize remaining proprety" 
+Seize_property_desc:0 "With the lack of guns and shortage of food,we need to do anything we can to ensure that we won't get low on guns and foods before final push starts,we better start this by seizing private properties from land owners, they are no different than monarchs after all."
+Pirates_cooperation:0"Seek Pirate cooperation"
+Pirates_cooperation_desc:0"Sea banditry was always a thing, even in days of Empire, but with the start of the civil war, most of royal navy ships and personnel went rogue and started their own pirate groups, if we convince them to help us in the Great Push, the imperialists won't be able to escape the peasants' wrath via sea."
+Internationalist_support:0 "Rally the International brigades"
+Internationalist_support_desc:0 "International Brigades are a communist foreign legion that seeks to overthrow tyrant regimes across the world. They have been helping us since 1004, we better tell them to prepare themselves for the final push."
+Speer_connection:0 "Use Spear's connections"
+Speer_connection_desc:0 "we must use every connection that spear can muster"
+petition_Republican_support:0 "Petition Republicans"
+petition_Republican_support_desc:0 "Since 978, you can find republicans everywhere in griffonia, they have some contacts in Equestria willing to send them aid, meaning allyingwith them will help us in the final push against the tyrant."
+
+#tooltips
+GLA_instability:0 "We aren't already looking for support.\n"
+GRW_raise_pirates:0 "One division of §BPirates§! will be raised.\n"
+GRW_Theresa_finest:0 "One division of §RTheresa's personal guard§! will be raised.\n"

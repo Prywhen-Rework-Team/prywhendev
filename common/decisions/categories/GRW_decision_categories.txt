@@ -1,0 +1,90 @@
+Prywhen_civil_war = {
+	icon = GFX_category_icon
+	picture = GFX_decision_cat_form_prywhen	
+	priority = 11		
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+	NOT = { has_global_flag = prywhen_civil_war_is_over }
+	original_tag = GRW
+	}
+}
+
+Theresa_buffer_state = {
+	icon = GFX_decision_category_form_prywhen_category
+	priority = 11		
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+	original_tag = GRW
+	is_debug = yes
+	}
+}
+Pirate_Expansion = {
+	icon = GFX_decision_category_form_prywhen_category
+	priority = 11		
+	
+	allowed = {
+		always = yes
+	}
+	
+	visible = {
+	original_tag = GRW
+	is_debug = yes
+	}
+}
+
+GRW_defense_of_the_revolution = {
+	icon = generic_communism
+	allowed = {
+		original_tag = GRW
+	}
+	priority = {
+		base = 8
+	}
+}
+GRW_food_problem = {
+ icon = generic_communism
+	allowed = {
+		original_tag = GRW
+	}
+	priority = {
+		base = 8
+	}
+}	
+BRF_in_the_name_of_the_king = {
+	icon = generic_fascism
+	allowed = {
+		original_tag = BRF
+	}
+	priority = {
+		base = 100
+	}
+}
+
+BRF_nonaligned = {
+	icon = decision_category_generic_political_actions
+	allowed = {
+		original_tag = BRF
+	}
+	priority = {
+		base = 70
+	}
+}
+
+BRF_masonic_decisions = {
+	icon = decision_category_generic_magic
+	allowed = {
+		original_tag = BRF
+	}
+	priority = {
+		base = 100
+	}
+}	
+

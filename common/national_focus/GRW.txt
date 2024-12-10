@@ -1,0 +1,6677 @@
+focus_tree = {
+	id = Griffon_Liberation_Army
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GRW
+		}
+	}
+	continuous_focus_position = { x = 2000 y = 5000 }
+	  default = no
+		focus = {
+		id = GRW_preperation_for_great_push
+
+		 icon = GFX_goal_DOM_The_Phoenix
+
+		 cost = 4
+		  x = 9
+		  y = 0
+
+		 bypass = {
+		    has_global_flag = prywhen_civil_war_is_over
+		  }
+
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_manpower = 3000
+		    add_equipment_to_stockpile = { type = infantry_equipment amount = 200 producer = GRW }
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+		}
+	}
+	focus = {
+		id = GRW_every_griff_counts
+
+		 icon = GFX_goal_GRW_ask_river_fed
+
+		  cost = 4
+		  x = 8
+		  y = 1
+
+		prerequisite = {
+			focus = GRW_preperation_for_great_push
+		}
+
+		bypass = {
+			has_global_flag = prywhen_civil_war_is_over
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_popularity = { ideology = democratic popularity = 0.07 }
+			}
+    }
+	focus = {
+
+		id = GRW_everything_that_is_left
+		 icon = GFX_goal_red_star_green_wreath
+
+		 cost = 4
+		  x = 10
+		  y = 1
+
+		prerequisite = {
+			focus = GRW_preperation_for_great_push
+		}
+
+		bypass = {
+			has_global_flag = prywhen_civil_war_is_over
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+            add_popularity = { ideology = communism popularity = 0.05 }
+			}
+	}
+
+	focus = {
+		id = GRW_reorgnizing_melitias
+		 icon = GFX_focus_wng_redwings
+
+		  cost = 4
+		  x = 8
+		  y = 2
+
+		prerequisite = {
+			focus = GRW_everything_that_is_left
+			focus = GRW_every_griff_counts
+        }
+
+		bypass = {
+			has_global_flag = prywhen_civil_war_is_over
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+
+		}
+	}
+	focus = {
+		id = GRW_coordination_between_fighters
+		 icon = GFX_goal_holding_hands_over_a_red_star
+
+		  cost = 4
+		  x = 10
+		  y = 2
+
+		prerequisite = {
+	        focus = GRW_everything_that_is_left
+			focus = GRW_every_griff_counts
+
+		}
+
+		bypass = {
+			has_global_flag = prywhen_civil_war_is_over
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+
+		}
+	}
+	focus = {
+		id = GRW_lets_finish_this
+		 icon = GFX_goal_prywhen_civilwar_red
+
+		  cost = 4
+		  x = 9
+		  y = 3
+
+		prerequisite = {
+			focus = GRW_coordination_between_fighters
+			focus = GRW_reorgnizing_melitias
+		}
+
+		bypass = {
+			has_global_flag = prywhen_civil_war_is_over
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+		}
+	}
+	focus = {
+		id = GRW_Victpry_over_king
+		 icon = GFX_goal_revolution
+
+		  cost = 4
+		  x = 9
+		  y = 4
+
+		prerequisite = {
+			focus = GRW_lets_finish_this
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+            add_ideas={
+		     GRW_divided_government
+		     GRW_post_civil_war_economy
+			 GRW_Beheaded_army
+		    }
+		}
+	}
+	focus = {
+		id = GRW_celebrate_this_moment
+		 icon = GFX_goal_rich_focus
+
+		 cost = 4
+		  x = 9
+		  y = 5
+
+		prerequisite = {
+			focus = GRW_Victpry_over_king
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           }
+	}
+	focus = {
+		id = GRW_Check_on_spear
+		 icon = GFX_goal_Check_on_spear
+
+		  cost = 4
+		  x = 7
+		  y = 5
+
+		prerequisite = {
+			focus = GRW_Victpry_over_king
+		}
+
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+        }
+	}
+	focus = {
+		id = GRW_Check_on_theresa
+		 icon = GFX_goal_Check_on_theresa
+
+		  cost = 4
+		  x = 11
+		  y = 5
+
+		prerequisite = {
+			focus = GRW_Victpry_over_king
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+        }
+	}
+	focus = {
+		id = GRW_Check_on_rain_twister
+		 icon = GFX_goal_Check_on_rain_twister
+
+		  cost = 4
+		  x = 13
+		  y = 5
+
+		prerequisite = {
+	        focus = GRW_Victpry_over_king
+		}
+
+		bypass = {}
+		a
+		i_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+
+		}
+	}
+	focus = {
+		id = GRW_Check_on_pirates
+		 icon = GFX_goal_Check_on_pirates
+
+		  cost = 4
+		  x = 5
+		  y = 5
+
+		prerequisite = {
+			focus = GRW_Victpry_over_king
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+        }
+	}
+	focus = {
+		id = GRW_The_meeting
+		 icon = GFX_YAL_the_free_frontier
+
+		  cost = 2
+		  x = 9
+		  y = 6
+
+		prerequisite = {
+			focus = GRW_celebrate_this_moment
+		}
+
+		prerequisite = {
+			focus = GRW_Check_on_pirates
+			focus = GRW_Check_on_rain_twister
+			focus = GRW_Check_on_theresa
+			focus = GRW_Check_on_spear
+			focus = GRW_Check_on_republicans
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	##################
+	#Republican Path##
+	##################
+
+	focus = {
+		id = GRW_Republican_victory
+		 icon = GFX_goal_Republican_victory
+
+		  cost = 2
+		  x = 35
+		  y = 5
+
+		available = {
+			has_government = neutrality
+			NOT = {
+		     has_idea = GLA_Divided
+	        }
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+        add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GRW_Republican_party
+		 icon = GFX_goal_champagne_party
+		  cost = 2
+		  x = 0
+		  y = 1
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_victory
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+        add_political_power = 50
+		add_stability = 0.05
+		country_event = 
+		}
+	}
+	focus = {
+		id = GRW_Republican_Who_will_lead
+		 icon = GFX_goal_Who_will_lead
+
+		  cost = 2
+		  x = 0
+		  y = 2
+		  relative_position_id= GRW_Republican_victory
+
+		available = {}
+
+		prerequisite = {
+		focus = GRW_Republican_party
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_political_power = -25
+		add_stability = -0.1
+		add_popularity = { ideology = neutrality popularity = -0.15 }
+		country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Republican_Rally_Support
+		 icon = GFX_goal_rally_support
+
+		  cost = 2
+		  x = -2
+		  y = 3
+		  relative_position_id= GRW_Republican_victory
+
+		mutually_exclusive = { focus = GRW_Republican_Pirate_Boss_Gives_Speech }
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Who_will_lead
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_political_power = 25
+		add_stability = -0.05
+		add_war_support = 0.1
+		add_manpower = 5000
+        }
+	}
+	focus = {
+		id = GRW_Republican_Pirate_Boss_Gives_Speech
+		 icon = GFX_goal_Pirate_Boss_Gives_Speech
+
+		  cost = 2
+		  x = 2
+		  y = 3
+		  relative_position_id= GRW_Republican_victory
+
+		mutually_exclusive = { focus = GRW_Republican_Rally_Support }
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Who_will_lead
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		country_event = 
+		add_political_power = 40
+		add_popularity = { ideology = neutrality popularity = 0.15 }
+		add_war_support = 0.15
+		add_stability = -0.1
+		add_manpower = 4000 
+		
+		}
+	}
+	focus = {
+		id = GRW_Pirate_Raid_Republican_Hideouts
+		 icon = GFX_YAL_raid_republican_armouries
+
+		  cost = 2
+	      x = 2
+		  y = 4
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Pirate_Boss_Gives_Speech
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = -0.05 }
+		add_war_support = 0.1
+		add_stability = -0.05
+		country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Pirate_Hunt_Down_Republicans
+		 icon = GFX_goal_abandon_the_republican_dream
+
+		  cost = 2
+		  x = 2
+		  y = 5
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Pirate_Raid_Republican_Hideouts
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = -0.05 }
+		add_war_support = 0.15
+		add_stability = -0.1
+		add_political_power = -50
+		country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Pirate_We_Are_In_Charge_Now
+		 icon = GFX_goal_Pirates_in_charge
+
+		  cost = 2
+		  x = 2
+		  y = 6
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Pirate_Hunt_Down_Republicans
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_political_power = -25
+		add_war_support = 0.05
+		add_stability = 0.05
+		country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Republican_Destroy_Pirates
+		 icon = GFX_goal_destroy_pirates
+
+		  cost = 2
+		  x = -2
+		  y = 4
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+
+		focus = GRW_Republican_Rally_Support
+		
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_war_support = -0.1
+		add_stability = 0.1
+		add_political_power = 25
+		country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Republican_Invite_Friends_From_Across_Griffonia
+		 icon = GFX_goal_JER_work_with_republicans
+
+		  cost = 2
+		  x = -2
+		  y = 5
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Destroy_Pirates
+		}
+
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		add_political_power = 100
+        }
+    }
+	focus = {
+		id = GRW_Republican_Our_Goal
+		 icon = GFX_goal_griffonian_republic
+
+		  cost = 2
+		  x = -2
+		  y = 6
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Invite_Friends_From_Across_Griffonia
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			country_event = 
+        }
+	}
+	focus = {
+		id = GRW_Bandits_To_West
+		 icon = GFX_goal_ban_blackrock
+
+		  cost = 2
+		  x = 0
+		  y = 5
+		  relative_position_id= GRW_Republican_victory
+
+		available = {
+			has_government = neutrality
+		}
+
+		prerequisite = {
+		focus = GRW_Republican_Destroy_Pirates
+		focus = GRW_Pirate_Raid_Republican_Hideouts
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+		create_wargoal = { target = BAN type = annex_everything }
+		add_war_support = 0.05
+        }
+	}
+	focus = {
+		id = GRW_Open_New_Embessies
+		icon = GFX_goal_government_icon
+		cost = 2
+		x = 0
+		y = 7
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Our_Goal
+		focus = GRW_Pirate_We_Are_In_Charge_Now
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			
+		    add_political_power = 50
+			country_event = 
+			
+			}
+		}
+		focus = {
+		id = GRW_Republican_In_Power
+		icon = GFX_goal_griffonian_republic
+		
+		cost = 2
+		x = -4
+		y = 7
+		relative_position_id= GRW_Republican_victory
+		
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Our_Goal
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Question_Parliment
+		icon = GFX_goal_Republican_Parliment_question
+		
+		cost = 2
+		x = -4
+		y = 8
+		relative_position_id= GRW_Republican_victory
+		
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_In_Power
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_An_Evian_Democracy
+		icon = GFX_goal_CVA_orthodox
+		
+		cost = 2
+		mutually_exclusive = { focus = GRW_Republican_Fatass_But_Prywhen }
+		x = -5
+		y = 10
+		relative_position_id= GRW_Republican_victory
+		
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Question_Parliment
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Fatass_But_Prywhen
+		icon = GFX_goal_kemerskai
+		cost = 2
+		mutually_exclusive = { focus = GRW_Republican_An_Evian_Democracy }
+		x = -3
+		y = 10
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Question_Parliment
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Preparing_Elections
+		icon = GFX_goal_generic_elections
+		cost = 2
+		x = -4
+		y = 11
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Fatass_But_Prywhen
+		focus = GRW_Republican_An_Evian_Democracy
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_First_Evian_Democracy
+		icon = GFX_focus_indy_democratic_process
+		cost = 2
+		x = -4
+		y = 12
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Preparing_Elections
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Start_Mil_Reform
+		icon = GFX_goal_FAT_army
+		cost = 2
+		x = -10
+		y = 8
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_In_Power
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Hiring_Former_Republicans
+		icon = GFX_goal_CTL_A_special
+		cost = 2
+		x = -11
+		y = 9
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Mil_Reform
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Conscripting_Locals
+		icon = GFX_goal_griffon_soldier
+		cost = 2
+		x = -9
+		y = 9
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Mil_Reform
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Hire_Mercs
+		icon = GFX_goal_griffon_special_force
+		cost = 2
+		x = -10
+		y = 10
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Mil_Reform
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Mercs_And_Locals_Army
+		icon = GFX_specialforces_gen
+		cost = 2
+		x = -10
+		y = 12
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Hire_Mercs
+		focus = GRW_Republican_Conscripting_Locals
+		focus = GRW_Republican_Hiring_Former_Republicans
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_An_Republican_Army 
+		}
+		mutually_exclusive = {
+		  focus = GRW_Republican_An_Conscript_Army 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_An_Conscript_Army
+		icon = GFX_goal_JER_national_militia_assembly
+		cost = 2
+		x = -12
+		y = 12
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Hire_Mercs
+		focus = GRW_Republican_Conscripting_Locals
+		focus = GRW_Republican_Hiring_Former_Republicans
+		} 
+		mutually_exclusive = { 
+		  focus = GRW_Republican_An_Republican_Army 
+		}
+		mutually_exclusive = {
+		  focus = GRW_Republican_Mercs_And_Locals_Army 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_An_Republican_Army
+		icon = GFX_goal_griffon_harmony_char
+		cost = 2		
+		x = -8
+		y = 12
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Hire_Mercs
+		focus = GRW_Republican_Conscripting_Locals
+		focus = GRW_Republican_Hiring_Former_Republicans
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_An_Conscript_Army 
+		}
+		mutually_exclusive = {
+		  focus = GRW_Republican_Mercs_And_Locals_Army 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Army_Reformed
+		icon = GFX_goal_JER_army_reform
+		cost = 2		
+		x = -10
+		y = 13
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_An_Republican_Army
+		focus = GRW_Republican_An_Conscript_Army
+		focus = GRW_Republican_Mercs_And_Locals_Army
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Start_Inudstry
+		icon = GFX_TBK_ales_industry
+		cost = 2		
+		x = -1
+		y = 8
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_In_Power
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_A_Proper_Police
+		icon = GFX_goal_step_on_skull
+		cost = 2		
+		x = 1
+		y = 9
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Land_Reforms
+		icon = GFX_goal_generic_land_reform
+		cost = 2		
+		x = -1
+		y = 9
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Attract_Industries
+		icon = GFX_goal_expand_private_industry
+		cost = 2		
+		x = 3
+		y = 9
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Start_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Improve_Steel_Factory
+		icon = GFX_zebra_steel
+		cost = 2		
+		x = -1
+		y = 10
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Land_Reforms
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Hire_Ponies_To_Extract_Oil
+		icon = GFX_goal_trade_oil_pony_pony
+		cost = 2		
+		x = 1
+		y = 11
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Attract_Industries
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Contact_Skyfall
+		icon = GFX_YAL_distribute_skyfall_wealth
+		cost = 2		
+		x = 3
+		y = 11
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Attract_Industries
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Contact_Vasile
+		icon = GFX_goal_ZAR_vasile
+		cost = 2		
+		x = 5
+		y = 11
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Attract_Industries
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+    country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Establishment_Of_E.E.F
+		icon = GFX_goal_WNG_steel
+		cost = 2		
+		x = -1
+		y = 12
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Improve_Steel_Factory
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Bring_The_Dream_To_Evi
+		icon = GFX_goal_national_arsenal
+		cost = 2		
+		x = -4
+		y = 14
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Establishment_Of_E.E.F
+		focus = GRW_Republican_Army_Reformed
+		focus = GRW_Republican_First_Evian_Democracy
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Stay_In_Evi
+		icon = GFX_goal_COS_Peace
+		cost = 2		
+		x = -8
+		y = 15
+		relative_position_id= GRW_Republican_victory
+		mutually_exclusive = { focus = GRW_Republican_To_Herzland }
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Bring_The_Dream_To_Evi
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_To_Herzland
+		icon = GFX_goal_JER_dealing_with_the_herzland
+		cost = 2		
+		x = 0
+		y = 15
+		relative_position_id= GRW_Republican_victory
+		mutually_exclusive = { focus = GRW_Republican_Stay_In_Evi }
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Bring_The_Dream_To_Evi
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_On_Our_Own
+		icon = GFX_goal_tripartite_pact_pony
+		cost = 2		
+		x = -1
+		y = 16
+		relative_position_id= GRW_Republican_victory
+		mutually_exclusive = { focus = GRW_Republican_Join_The_Pact }
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_To_Herzland
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Join_The_Pact
+		icon = GFX_goal_JER_work_with_republicans
+		cost = 2		
+		x = 1
+		y = 16
+		relative_position_id= GRW_Republican_victory
+		mutually_exclusive = { focus = GRW_Republican_On_Our_Own }
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_To_Herzland
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Prepare_Military
+		icon = GFX_goal_generic_military_equipment
+		cost = 2		
+		x = 0
+		y = 17
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Join_The_Pact
+		focus = GRW_Republican_On_Our_Own
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Prepare_Industry
+		icon = GFX_goal_CTL_mils
+		cost = 2		
+		x = -1
+		y = 18
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Prepare_Military
+		      }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Prepare_People
+		icon = GFX_goal_JER_the_grand_army
+		cost = 2		
+		x = 1
+		y = 18
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Prepare_Military
+		      }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Let_The_Struggle_Begin
+		icon = GFX_goal_stg_socialist_fighter
+		cost = 2		
+		x = 0
+		y = 19
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Prepare_Military 
+		  }
+		 prerequisite = {
+		focus = GRW_Republican_Prepare_People 
+		focus = GRW_Republican_Prepare_Industry
+		  }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_War_Plan_Vartai
+		icon = GFX_focus_generic_eagle
+		cost = 2		
+		x = 0
+		y = 20
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Let_The_Struggle_Begin 
+		 }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_War_Plan_Karthinia
+		icon = GFX_goal_generic_attack_wingbardy
+		cost = 2		
+		x = -2
+		y = 20
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Let_The_Struggle_Begin 
+		 }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_War_Plan_South
+		icon = GFX_goal_generic_attack_sicameon
+		cost = 2		
+		x = 2
+		y = 20
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Let_The_Struggle_Begin 
+		 }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+	focus = {
+		id = GRW_Republican_War_Plan_Herzland
+		icon = GFX_WNG_B_empire
+		cost = 2		
+		x = 0
+		y = 21
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_War_Plan_Vartai 
+		focus = GRW_Republican_War_Plan_South 
+		focus = GRW_Republican_War_Plan_Karthinia 
+		 }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			declare_war_on = {
+       target = GRI
+              type = annex_everything
+           }
+         }
+	}
+		focus = {
+		id = GRW_Republican_Victory_Atlast
+		icon = GFX_HIP_raz_victory
+		cost = 2		
+		x = 0
+		y = 22
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_War_Plan_Herzland 
+		 }
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Agreement_With_RIverlands
+		icon = GFX_goal_riv_river_union
+		cost = 2		
+		x = -6
+		y = 16
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Stay_In_Evi
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Agreement_With_Wingbardy
+		icon = GFX_focus_wingbardy_forever
+		cost = 2		
+		x = -10
+		y = 16
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Stay_In_Evi
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Secure_Trade_From_Zebrica
+		icon = GFX_goal_BAT_The_Sword_Of_Zebrican_Democracy
+		cost = 2		
+		x = -8
+		y = 16
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Stay_In_Evi
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Control_Trade_Between_Zebric_&_Griffonia
+		icon = GFX_goal_reconfigure_north_zebrican_diplomacy
+		cost = 2		
+		x = -8
+		y = 17
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Secure_Trade_From_Zebrica
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Western_Wall
+		icon = GFX_goal_nested_fortifications
+		cost = 2		
+		x = -10
+		y = 17
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Agreement_With_Wingbardy
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Eastern_Wall
+		icon = GFX_goal_skull_fortification
+		cost = 2		
+		x = -6
+		y = 17
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Agreement_With_RIverlands
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Interventionism
+		icon = GFX_goal_Arms_Export
+		cost = 2		
+		x = -8
+		y = 19
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Control_Trade_Between_Zebric_&_Griffonia
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+			}
+		}
+		focus = {
+		id = GRW_Republican_Neutrality
+		icon = GFX_goal_authority
+		cost = 2		
+		x = -8
+		y = 18
+		relative_position_id= GRW_Republican_victory
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Control_Trade_Between_Zebric_&_Griffonia
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		
+	##################
+	#Non al Industry##
+	##################
+		
+	focus = {
+		id = GRW_Republican_Inudstry
+		icon = GFX_goal_GRI_industryzone
+		cost = 2		
+		x = 25
+		y = 1
+		available = {
+			has_government = neutrality
+			has_idea = GRW_post_civil_war_economy
+		}
+		prerequisite = {}
+		
+		bypass = {}
+		
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	 swap_ideas = {
+		    remove_idea = GRW_post_civil_war_economy
+			add_idea = GRW_economy_recovery_1 
+		}
+           }
+		}
+		focus = {
+		id = GRW_Republican_Fight_Poverty
+		icon = GFX_goal_JER_anti_monopoly_laws
+		cost = 2		
+		x = 25
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Masons_Dam
+		icon = GFX_goal_dam
+		cost = 2		
+		x = 27
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Import_Food
+		icon = GFX_goal_PAL_Food_Import
+		cost = 2		
+		x = 23
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Finish_The_Dam
+		icon = GFX_goal_dam_2
+		cost = 2		
+		x = 27
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Masons_Dam
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		  completion_reward = {
+	 GRW_reduce_civil_war_recovery = yes
+	      }
+	 }
+	focus = {
+		id = GRW_Republican_Schools_For_Everyone
+		icon = GFX_goal_griffon_schools
+		cost = 2		
+		x = 25
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Fight_Poverty
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Domestic_Food_Production
+		icon = GFX_goal_food_problem1
+		cost = 2		
+		x = 23
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Fight_Poverty
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		   completion_reward = {
+    GRW_reduce_civil_war_recovery = yes
+	       }
+	 }  
+	    
+		focus = {
+		id = GRW_Republican_Build_Food_Storage
+		icon = GFX_goal_food_market
+		cost = 2		
+		x = 23
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Domestic_Food_Production
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Rebuild_Kivessin_Uni
+		icon = GFX_goal_PAN_Create_the_Universidad_de_Panama
+		cost = 2		
+		x = 25
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Schools_For_Everyone
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Seize_Masons_Property
+		icon = GFX_goal_silver_reserve
+		cost = 2		
+		x = 27
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Finish_The_Dam
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Expand_Uni
+		icon = GFX_goal_education
+		cost = 2		
+		x = 25
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Rebuild_Kivessin_Uni
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Increase_Science
+		icon = GFX_goal_JER_begin_reforming_education_system
+		cost = 2		
+		x = 27
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Rebuild_Kivessin_Uni
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Oil
+		icon = GFX_goal_further_oil
+		cost = 2		
+		x = 21
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Inudstry
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Repair_Steel_Factory
+		icon = GFX_Steel
+		cost = 2		
+		x = 21
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Oil
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+	focus = {
+		id = GRW_Republican_Make_Sydia_Great_Again
+		icon = GFX_SIA_maritmesilkroad
+		cost = 2		
+		x = 21
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Repair_Steel_Factory
+		}
+		require
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	GRW_reduce_civil_war_recovery = yes
+		}
+	 }
+	focus = {
+		id = GRW_Republican_Improve_Infstructure
+		icon = GFX_goal_generic_railroad
+		cost = 2		
+		x = 22
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Make_Sydia_Great_Again
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Develope_Saltmarket
+		icon = GFX_goal_KTG_Jungle_Railroad
+		cost = 2		
+		x = 20
+		y = 5
+		available = {
+			has_government = neutrality
+		   owns_state = 507
+		    has_full_control_of_state = 507
+		}
+		prerequisite = {
+		focus = GRW_Republican_Make_Sydia_Great_Again
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Open_R&D
+		icon = GFX_goal_double_research
+		cost = 2		
+		x = 45
+		y = 1
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Purchase_Guns
+		icon = GFX_goal_generic_gunrunning
+		cost = 2		
+		x = 45
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Open_R&D
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Hire_Advisorss
+		icon = GFX_goal_officers
+		cost = 2		
+		x = 43
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Open_R&D
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Build_Mils
+		icon = GFX_goal_artillery_factories
+		cost = 2		
+		x = 47
+		y = 2
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Open_R&D
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Import_Weapon_Schemes
+		icon = GFX_goal_JER_send_guns_to_rila
+		cost = 2		
+		x = 48
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Build_Mils
+		focus = GRW_Republican_Hire_Advisorss
+		focus = GRW_Republican_Purchase_Guns
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Import_Boom_Gun_Schemes
+		icon = GFX_goal_national_artillery
+		cost = 2		
+		x = 46
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Build_Mils
+		focus = GRW_Republican_Hire_Advisorss
+		focus = GRW_Republican_Purchase_Guns
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Import_Tank_Schemes
+		icon = GFX_goal_Timberwolf_research
+		cost = 2		
+		x = 44
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Build_Mils
+		focus = GRW_Republican_Hire_Advisorss
+		focus = GRW_Republican_Purchase_Guns
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Study_Wars
+		icon = GFX_goal_GEA_guerilla_warfare
+		cost = 2		
+		x = 42
+		y = 3
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Build_Mils
+		focus = GRW_Republican_Hire_Advisorss
+		focus = GRW_Republican_Purchase_Guns
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Study_Mobile_Warfare
+		icon = GFX_truck_gen
+		cost = 2		
+		x = 50
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Import_Weapon_Schemes
+		focus = GRW_Republican_Import_Boom_Gun_Schemes
+		focus = GRW_Republican_Import_Tank_Schemes
+		focus = GRW_Republican_Study_Wars
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Fire_Power 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Grand_Plan 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mass_Ass 
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Study_Mass_Ass
+		icon = GFX_goal_revolution
+		cost = 2		
+		x = 47
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Import_Weapon_Schemes
+		focus = GRW_Republican_Import_Boom_Gun_Schemes
+		focus = GRW_Republican_Import_Tank_Schemes
+		focus = GRW_Republican_Study_Wars
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Fire_Power 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Grand_Plan 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mobile_Warfare 
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Study_Grand_Plan
+		icon = GFX_goal_planning_bonus
+		cost = 2		
+		x = 43
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Import_Weapon_Schemes
+		focus = GRW_Republican_Import_Boom_Gun_Schemes
+		focus = GRW_Republican_Import_Tank_Schemes
+		focus = GRW_Republican_Study_Wars
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Fire_Power 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mass_Ass 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mobile_Warfare 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Study_Fire_Power
+		icon = GFX_goal_artillery
+		cost = 2		
+		x = 40
+		y = 4
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Import_Weapon_Schemes
+		focus = GRW_Republican_Import_Boom_Gun_Schemes
+		focus = GRW_Republican_Import_Tank_Schemes
+		focus = GRW_Republican_Study_Wars
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Grand_Plan 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mass_Ass 
+		}
+		mutually_exclusive = { 
+		  focus = GRW_Republican_Study_Mobile_Warfare 
+		}
+		bypass = {}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GRW_militia"
+           
+			}
+		}
+		focus = {
+		id = GRW_Republican_Alot_Of_Shells
+		icon = GFX_goal_punishing_barrage
+		cost = 2		
+		x = 39
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Fire_Power
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Planning
+		icon = GFX_goal_generic_ordnance
+		cost = 2		
+		x = 41
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Fire_Power
+		focus = GRW_Republican_Study_Grand_Plan
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Super_Planning
+		icon = GFX_focus_generic_tank_destroyer
+		cost = 2		
+		x = 43
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Grand_Plan
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Wave_Planning
+		icon = GFX_goal_Dare_to_Die_Corps
+		cost = 2		
+		x = 45
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Mass_Ass
+		focus = GRW_Republican_Study_Grand_Plan
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Meat_Wave
+		icon = GFX_goal_RUS_white_legacy
+		cost = 2		
+		x = 47
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Mass_Ass
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Rush_In
+		icon = GFX_goal_stg_socialist_fighter
+		cost = 2		
+		x = 49
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Mass_Ass
+		focus = GRW_Republican_Study_Mobile_Warfare
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Armord_Warfare
+		icon = GFX_tank_H
+		cost = 2		
+		x = 51
+		y = 5
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Study_Mobile_Warfare
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Republican_Re_Open_Kivessin_Mil_Academy
+		icon = GFX_goal_GRI_science
+		cost = 2		
+		x = 45
+		y = 7
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Republican_Armord_Warfare
+		focus = GRW_Republican_Meat_Wave
+		focus = GRW_Republican_Super_Planning
+		focus = GRW_Republican_Alot_Of_Shells
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		
+	###############
+	#Imperium Path##
+	###############
+	
+		focus = {
+		id = GRW_Pirate_Fate_Of_Revolution
+		icon = GFX_focus_grw_flag
+		cost = 2		
+		x = 10
+		y = 1
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_We_Are_In_Charge_Now
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Fate_Of_Remnants
+		icon = GFX_brf_king_glory
+		cost = 2		
+		x = 10
+		y = 2
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Fate_Of_Revolution
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_No_Longer_Pirates
+		icon = GFX_goal_leopardo_government
+		cost = 2		
+		x = 10
+		y = 3
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Fate_Of_Remnants
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Lets_Fix_This_Shithole
+		icon = GFX_goal_JER_reforming_the_airforce
+		cost = 2		
+		x = 10
+		y = 4
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_No_Longer_Pirates
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Order_By_Force
+		icon = GFX_goal_TBK_order
+		cost = 2		
+		x = 10
+		y = 5
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Lets_Fix_This_Shithole
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_New_Rules
+		icon = GFX_goal_TBK_sevrule
+		cost = 2		
+		x = 13
+		y = 5
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Lets_Fix_This_Shithole
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Develop_Army
+		icon = GFX_viira_army
+		cost = 2		
+		x = 7
+		y = 5
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Lets_Fix_This_Shithole
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_local_Councils
+		icon = GFX_focus_generic_authoritarian_government
+		cost = 2		
+		x = 13
+		y = 6
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_New_Rules
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Offer_Bandits
+		icon = GFX_goal_skull_treaty
+		cost = 2		
+		x = 15
+		y = 6
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_New_Rules
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Welfare_For_Peaseants
+		icon = GFX_goal_welfare_brackets
+		cost = 2		
+		x = 11
+		y = 6
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_New_Rules
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Land_Reform
+		icon = GFX_goal_OTT_Land_Reform
+		cost = 2		
+		x = 11
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Welfare_For_Peaseants
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Power_For_Loyal&Decent
+		icon = GFX_goal_JER_integrate_the_loyal
+		cost = 2		
+		x = 11
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Land_Reform
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Reform_Judiciary
+		icon = GFX_zebra_judge
+		cost = 2		
+		x = 13
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_local_Councils
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Reform_Education
+		icon = GFX_goal_voluntary_education
+		cost = 2		
+		x = 13
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Reform_Judiciary
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Teach_Them_Law
+		icon = GFX_goal_forced_mil
+		cost = 2		
+		x = 15
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Offer_Bandits
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Bandit_agents
+		icon = GFX_goal_secret_agents
+		cost = 2		
+		x = 15
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Teach_Them_Law
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Stable_Goverment
+		icon = GFX_goal_generic_stable_government
+		cost = 2		
+		x = 13
+		y = 9
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Bandit_agents
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Reform_Education
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Power_For_Loyal&Decent
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_bandit_auxiliaries
+		icon = GFX_goal_forced_mil
+		cost = 2		
+		x = 9
+		y = 6
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Develop_Army
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Our_Friends
+		icon = GFX_goal_LEC_monkey
+		cost = 2		
+		x = 5
+		y = 6
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Develop_Army
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Invite_More_Friends
+		icon = GFX_goal_TBK_band_of_flayers
+		cost = 2		
+		x = 5
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Our_Friends
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_A_Small_Talk_With_Hermann
+		icon = GFX_goal_The_Dragonlord_2
+		cost = 2		
+		x = 5
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Invite_More_Friends
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Invite_Old_Knights
+		icon = GFX_goal_old_knights
+		cost = 2		
+		x = 9
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_bandit_auxiliaries
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Hire_Mercs
+		icon = GFX_goal_MAF_Merc_Pilots
+		cost = 2		
+		x = 9
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Invite_Old_Knights
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Smuggle_Weapons
+		icon = GFX_goal_generic_gunrunning
+		cost = 2		
+		x = 7
+		y = 7
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Our_Friends		
+		focus = GRW_Pirate_bandit_auxiliaries
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Smuggle_Ships
+		icon = GFX_focus_generic_navy_battleship3
+		cost = 2		
+		x = 7
+		y = 8
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Smuggle_Weapons		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Military_Rule
+		icon = GFX_goal_HOL_ban_paramilitary_left
+		cost = 2		
+		x = 7
+		y = 9
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_A_Small_Talk_With_Hermann		
+		focus = GRW_Pirate_Hire_Mercs	
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Rebirth_Of_Phoniex
+		icon = GFX_Phoniex_rise
+		cost = 2		
+		x = 10
+		y = 10
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Military_Rule		
+		focus = GRW_Pirate_Stable_Goverment	
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+	focus = {
+		id = GRW_Pirate_Phoniex_Wings
+		icon = GFX_focus_indy_swing_the_sword
+		cost = 2		
+		x = 10
+		y = 11
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Rebirth_Of_Phoniex		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+		    declare_war_on = {
+       target = LUS
+              type = annex_everything
+       }
+	        declare_war_on = {
+       target = GRY
+              type = annex_everything
+       }
+	      declare_war_on = {
+       target = GRU
+              type = annex_everything
+       }
+	      declare_war_on = {
+       target = CYA
+              type = annex_everything
+       }
+           }
+		}
+	focus = {
+		id = GRW_Pirate_Lushi_Justice
+		icon = GFX_goal_LUS_clover
+		cost = 2		
+		x = 6
+		y = 12
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Phoniex_Wings		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+		country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Gryphonian_Deal
+		icon = GFX_goal_GRY_shield
+		cost = 2		
+		x = 8
+		y = 12
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Phoniex_Wings		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Seize_Company_Wealth
+		icon = GFX_goal_endless_money
+		cost = 2		
+		x = 12
+		y = 12
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Phoniex_Wings		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Establish_FreeCity
+		icon = GFX_goal_free_market
+		cost = 2		
+		x = 14
+		y = 12
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Phoniex_Wings		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Rise_Of_Phoniex
+		icon = GFX_goal_Phoniex_rise
+		cost = 2		
+		x = 10
+		y = 13
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Phoniex_Wings		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Western_Expansion
+		icon = GFX_goal_generic_karthin_empire
+		cost = 2		
+		x = 8
+		y = 14
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Rise_Of_Phoniex		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Eastern_Expansion
+		icon = GFX_goal_river_fed_suppression
+		cost = 2		
+		x = 12
+		y = 14
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Rise_Of_Phoniex		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Beast_Of_The_East
+		icon = GFX_Beast_Of_The_East
+		cost = 2		
+		x = 13
+		y = 15
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Eastern_Expansion		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Fate_Of_West
+		icon = GFX_goal_crush_wng
+		cost = 2		
+		x = 7
+		y = 15
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Western_Expansion		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Pacific_Expansion
+		icon = GFX_goal_generic_coastal_navy
+		cost = 2		
+		x = 10
+		y = 14
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Rise_Of_Phoniex		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Outposts_Across_Pacific
+		icon = GFX_zebra_navy
+		cost = 2		
+		x = 10
+		y = 15
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Pacific_Expansion		
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+           }
+		}
+		focus = {
+		id = GRW_Pirate_Eternal_Imperium
+		icon = GFX_goal_solar_phoenix_defence
+		cost = 2		
+		x = 10
+		y = 17
+		relative_position_id= GRW_Pirate_We_Are_In_Charge_Now
+		available = {
+			has_government = neutrality
+		}
+		prerequisite = {
+		focus = GRW_Pirate_Beast_Of_The_East
+		focus = GRW_Pirate_Outposts_Across_Pacific	
+		focus = GRW_Pirate_Fate_Of_West
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+	country_event = 
+           }
+		}
+	###############
+	#Theresa Path##
+	###############
+
+  focus = {
+		id = GRW_Another_bloodshed
+		 icon = NA
+
+		  cost = 5
+		  x = 0
+		  y = -1
+		
+		available = {
+		always = no
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+        relative_position_id= GRW_Theresa_takeover
+		
+		completion_reward = {
+
+        }
+    }  
+    focus = {
+		id = GRW_Theresa_takeover
+		 icon = GFX_goal_Theresa_Take_over
+
+		  cost = 8
+		  x = 9
+		  y = 10
+		 
+
+		available = {
+			has_government = fascism
+			NOT = {
+		     has_idea = GLA_Divided
+
+	        }
+		}
+        
+		prerequisite = {
+		focus =GRW_Another_bloodshed
+		}
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = { #event about her takeover
+        
+        }
+    }
+	focus = {
+		id = GRW_Restore_Order
+		 icon = GFX_goal_TBK_order
+
+		  cost = 8
+		  x = -1
+		  y = 1
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_Theresa_takeover
+		}
+
+		completion_reward = {
+		add_stability = 0.05
+		add_political_power = 100
+		add_popularity = {
+        ideology = fascism
+        popularity = 0.1
+        }
+            swap_ideas = {
+		    remove_idea = GRW_divided_government
+			add_idea = GRW_stabilization_efforts 
+		}
+        }
+    }
+	focus = {
+		id = GRW_Peasant_National_army
+		 icon = GFX_goal_griffon_levy
+
+		  cost = 4
+		  x = 1
+		  y = 1
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_Theresa_takeover
+		}
+
+		completion_reward = {
+		army_experience = 10
+		add_doctrine_cost_reduction = {
+	    cost_reduction = 1
+	    uses = 1
+	    category = cat_mass_assault 
+        }
+		add_war_support = 0.1
+        swap_ideas = {
+		    remove_idea = GRW_Beheaded_army
+			add_idea = GRW_Peasant_national_guard  
+		}
+        }
+    }
+	focus = {
+		id = GRW_the_first_national_peasant_state
+		 icon = GFX_goal_national_populism
+
+		  cost = 3
+		  x = 0
+		  y = 2
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_Peasant_National_army
+		}
+		prerequisite = {
+		focus =GRW_Restore_Order
+		}
+
+		completion_reward = { #event to choose the path
+
+        }
+    }
+	
+	#theresa dawnclaw#
+	
+	focus = {
+		id = GRW_our_benefactor_calls
+		 icon = GFX_goal_Duskclaw_Icon_Vacant
+
+		  cost = 4
+		  x = 5
+		  y = 3
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_first_national_peasant_state
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {#industrial advisor unlock
+		id = GRW_Imperial_advisors
+		 icon = GFX_goal_GRI_army_expansion
+
+		  cost = 4
+		  x = 4
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_our_benefactor_calls
+		}
+
+		completion_reward = {
+		add_stability= -0.05
+			add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+		country_event= prywhen.29
+        }
+    }
+	focus = {
+		id = GRW_adapt_reicharmee_model
+		 icon = GFX_goal_GRI_reichswaffen
+
+		  cost = 4
+		  x = 3
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Imperial_advisors
+		}
+
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+	     cost_reduction = 0.5
+	     uses = 1
+	     category = cat_superior_firepower
+        }
+		army_experience= 25
+        swap_ideas = {
+         remove_idea = GRW_Peasant_national_guard
+		 add_idea = GRW_reicharmee_copycat}
+        }
+    }
+	focus = {
+		id = GRW_mass_imperial_hardware_influx
+		 icon = GFX_goal_GRI_bluetronics
+
+		  cost = 4
+		  x = 6
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_our_benefactor_calls
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		add_political_power= -100
+        	add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = industry
+		}
+			add_political_power= -100
+        	add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 1
+			category = support
+		}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = electronics
+		}
+			add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.75
+			uses = 2
+			category = infantry_weapons
+		}
+			add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 2
+			category = artillery
+		}
+        }
+    }
+	focus = {
+		id = GRW_complete_loyality
+		 icon = GFX_goal_GRI_loyal_north
+
+		  cost = 4
+		  x = 5
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		prerequisite = {
+		focus =GRW_mass_imperial_hardware_influx
+        } 
+		prerequisite = {
+		focus = GRW_our_benefactor_calls
+		}
+
+		completion_reward = {
+		add_manpower= -10000
+		add_stability= -0.05
+		add_political_power= -50
+         swap_ideas = {
+         remove_idea = GRW_stabilization_efforts
+		 add_idea = GRW_blind_loyalty}
+        }
+    }
+	focus = {
+		id = GRW_Carve_a_path_toward_our_ally
+		 icon = GFX_goal_JER_imperial_spleandour
+
+		  cost = 4
+		  x = 5
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_complete_loyality
+		}
+		prerequisite = {
+		focus =GRW_adapt_reicharmee_model
+        }
+		
+		completion_reward = {
+         if = {
+			limit = {
+				LUS = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = LUS}
+		}
+		if = {
+			limit = {
+				HLQ = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = HLQ}
+		}
+		if = {
+			limit = {
+				LNS = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = LNS}
+		}
+		if = {
+			limit = {
+				LSM = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = LSM }
+		}
+		if = {
+			limit = {
+				LSC = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = LSC}
+		}
+        }
+    }
+	focus = {
+		id = GRW_The_eastern_marke_born #we can go for a more german name for this
+		 icon = GFX_goal_hoist_the_flag
+
+		  cost = 4
+		  x = 5
+		  y = 7
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		LNS= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		LUS= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		HLQ= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Carve_a_path_toward_our_ally
+		}
+		
+		completion_reward = {
+         country_event= prywhen.30
+        }
+    }
+	focus = {
+		id = GRW_lushian_auxiliaries
+		 icon = GFX_goal_LUS_expand_military_branch
+
+		  cost = 4
+		  x = 4
+		  y = 8
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_eastern_marke_born
+		}
+		
+		completion_reward = {
+        add_ideas= GRW_lushi_auxilia
+        }
+    }
+	focus = {
+		id = GRW_becoming_shield
+		 icon = GFX_goal_griffon_shield
+
+		  cost = 4
+		  x = 6
+		  y = 8
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_eastern_marke_born
+		}
+		
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+	     cost_reduction = 1
+	     uses = 1
+	     category = cat_superior_firepower
+        }
+         swap_ideas = {
+		 remove_idea = GRW_reicharmee_copycat
+		 add_idea = GRW_imperial_marke }
+        }
+    }
+	focus = { #starry advisor
+		id = GRW_new_citizenship_act
+		 icon = GFX_HIP_path_to_citizenship
+
+		  cost = 4
+		  x = 7
+		  y = 9
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_eastern_marke_born
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_the_herzlandish_lifeline
+		 icon = GFX_goal_generic_castle
+
+		  cost = 4
+		  x = 5
+		  y = 9
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_eastern_marke_born
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_The_new_knights
+		 icon = GFX_goal_griffon_knights
+
+		  cost = 4
+		  x = 6
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_becoming_shield
+		}
+			prerequisite = {
+		focus =GRW_new_citizenship_act
+		}
+			prerequisite = {
+		focus =GRW_the_herzlandish_lifeline
+		}
+		
+		completion_reward = {
+		add_manpower= 12000
+		add_war_support= 0.05
+        add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1.0
+			uses = 2
+			category = race_tech
+		}
+		add_ideas= GRW_Red_knights
+        }
+    }
+	focus = {
+		id = GRW_checkpoints_and_supply_lines
+		 icon = GFX_goal_TEM_harrass_supply_lines
+
+		  cost = 4
+		  x = 4
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_lushian_auxiliaries
+		focus =GRW_the_herzlandish_lifeline
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_secure_the_borderlands
+		 icon = GFX_YAL_rally_the_student_vanguard
+
+		  cost = 4
+		  x = 5
+		  y = 11
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_checkpoints_and_supply_lines
+		}
+			prerequisite = {
+		focus =GRW_The_new_knights
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_steppes_of_Zaphazia
+		 icon = GFX_goal_support_from_GRY
+
+		  cost = 4
+		  x = 4
+		  y = 12
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_secure_the_borderlands
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_free_cities_of_Griphius
+		 icon = GFX_goal_support_from_GRU
+
+		  cost = 4
+		  x = 5
+		  y = 13
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_secure_the_borderlands
+		}
+		prerequisite = {
+		focus =GRW_force_discipline
+		focus =GRW_steppes_of_Zaphazia
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_force_discipline
+		 icon = GFX_goal_forced_mil
+
+		  cost = 4
+		  x = 6
+		  y = 12
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_secure_the_borderlands
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_land_of_opportunities
+		 icon = GFX_All_resource
+
+		  cost = 4
+		  x = 7
+		  y = 13
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_force_discipline
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_economic_integration
+		 icon = GFX_goal_state_economy
+
+		  cost = 4
+		  x = 3
+		  y = 13
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_steppes_of_Zaphazia
+		}
+		
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_to_serve_the_empire
+		 icon = GFX_goal_Duskclaw_Icon
+
+		  cost = 4
+		  x = 4
+		  y = 14
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_economic_integration
+		}
+		prerequisite = {
+		focus =GRW_free_cities_of_Griphius
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_bureaucratical_reshuffling
+		 icon = GFX_TBK_ales_paper
+
+		  cost = 4
+		  x = 6
+		  y = 14
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_land_of_opportunities
+		}
+		prerequisite = {
+		focus =GRW_free_cities_of_Griphius
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_to_achieve_the_impossible
+		 icon = GFX_goal_military_academy
+
+		  cost = 4
+		  x = 5
+		  y = 16
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_bureaucratical_reshuffling
+		}
+		prerequisite = {
+		focus =GRW_to_serve_the_empire
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_production_optimization
+		 icon = GFX_YAL_seize_the_means_of_production
+
+		  cost = 4
+		  x = 6
+		  y = 15
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_bureaucratical_reshuffling
+		}
+	
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_expdand_the_ranks
+		 icon = GFX_goal_griffon_soldier
+
+		  cost = 4
+		  x = 4
+		  y = 15
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_economic_integration
+		}
+	
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_new_herzlandish_toys
+		 icon = GFX_goal_GRI_heavy_tank
+
+		  cost = 4
+		  x = 4
+		  y = 17
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_expdand_the_ranks
+		}
+	
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_everybody_for_the_war_machine
+		 icon = GFX_goal_skull_treaty
+
+		  cost = 4
+		  x = 6
+		  y = 17
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_production_optimization
+		}
+	
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_What_grover_II_Could_never_achieve
+		 icon = GFX_goal_river_fed_suppression
+
+		  cost = 4
+		  x = 5
+		  y = 18
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_everybody_for_the_war_machine
+		}
+		prerequisite = {
+		focus =GRW_to_achieve_the_impossible
+		}
+		prerequisite = {
+		focus =GRW_new_herzlandish_toys
+		}
+	    
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_reorganize_the_riverlands
+		 icon = GFX_goal_fre_federation
+
+		  cost = 4
+		  x = 4
+		  y = 19
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_What_grover_II_Could_never_achieve
+		
+	    }
+		 
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_sunset_over_lake_city
+		 icon = GFX_goal_blacksun_dagger
+
+		  cost = 4
+		  x = 5
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_What_grover_II_Could_never_achieve
+	    }
+		prerequisite = {
+		focus =GRW_reorganize_the_riverlands
+		focus= GRW_riverlandian_auxiliary_system
+	    }
+		 
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_riverlandian_auxiliary_system
+		 icon = GFX_goal_generic_pony_volunteer
+
+		  cost = 4
+		  x = 6
+		  y = 19
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_What_grover_II_Could_never_achieve
+	    }
+		 
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_Free_city_of_Nimbusi
+		 icon = GFX_goal_Nimbus_free_city
+
+		  cost = 4
+		  x = 7
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_riverlandian_auxiliary_system
+	    }
+		 
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_expand_the_chapters_lands
+		 icon = GFX_goal_Chapters_lands
+
+		  cost = 4
+		  x = 3
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_reorganize_the_riverlands
+	    }
+		 
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_most_loyal_servant
+		 icon = GFX_Loyal_Theresa
+
+		  cost = 4
+		  x = 5
+		  y = 21
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_Free_city_of_Nimbusi
+	    }
+		prerequisite = {
+		focus =GRW_expand_the_chapters_lands
+	    }
+		prerequisite = {
+		 focus = GRW_sunset_over_lake_city
+		 }
+		completion_reward = {
+
+        }
+    }
+	
+	#theresa indipendent#
+	
+	focus = {
+		id = GRW_our_own_struggle
+		 icon = GFX_goal_ideology_national_populist
+
+		  cost = 4
+		  x = -5
+		  y = 3
+		 relative_position_id= GRW_Theresa_takeover
+		 
+		available = {
+		always = no
+		} 
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_first_national_peasant_state
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id = GRW_simplifying_bureaucracy
+		 icon = GFX_goal_news
+
+		  cost = 8
+		  x = -6
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_our_own_struggle
+		}
+
+		completion_reward = {
+        swap_ideas = { 
+		 remove_idea = GRW_stabilization_efforts 
+		 add_idea = GRW_stabilization_efforts_1 }
+		add_stability= -0.05
+		add_war_support= -0.05
+        }
+    }
+	focus = {
+		id = GRW_national_guard_pacification_efforts
+		 icon = GFX_goal_stg_socialist_fighter
+
+		  cost = 8
+		  x = -4
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_our_own_struggle
+		}
+
+		completion_reward = { #halve it and expand through decisions
+		 set_technology = {
+         basic_train = 1
+        }
+        build_railway = {
+        level = 1
+        start_province = 10377
+        target_province = 12436
+        }
+		 build_railway = {
+        level = 1
+        start_province = 3875
+        target_province = 12436
+        }
+	    build_railway = {
+        level = 1
+        start_province = 1010
+        target_province = 4592
+        }
+		 build_railway = {
+        level = 1
+        start_province = 12436
+        target_province = 4384
+        }
+	     build_railway = {
+        level = 1
+        path = { 10377 4125 12378 7128 7559 4405 4341 7572}
+        }
+	   385 = { add_manpower = -15000
+	   add_extra_state_shared_building_slots = 1 }
+	   414= { add_manpower = -7500
+           add_extra_state_shared_building_slots = 1 }
+	  508= { add_manpower = -8500
+         add_extra_state_shared_building_slots = 1 }
+		}
+		add_stability= -0.05
+    }
+	focus = {
+		id = GRW_Every_peasant_highest_duty
+		 icon = GFX_goal_stg_socialist_officer
+
+		  cost = 8
+		  x = -5
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_national_guard_pacification_efforts
+		focus =GRW_simplifying_bureaucracy
+		}
+
+		completion_reward = {
+         country_event = prywhen.20
+        }
+    }
+	focus = {
+		id = GRW_rice_bullets_order
+		 icon = GFX_focus_generic_treaty_red
+
+		  cost = 8
+		  x = -3
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_national_guard_pacification_efforts
+		}
+
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+	     cost_reduction = 0.5
+	     uses = 1
+	     category = cat_mass_assault
+        }
+		 add_manpower= 15000
+            swap_ideas = {
+		    remove_idea = GRW_Peasant_national_guard
+			add_idea = GRW_Peasant_national_guard_1 
+		}
+        }
+    }
+	focus = {
+		id = GRW_the_V_regiment_fiefdom
+		 icon = GFX_goal_red_star_gold_wreath
+
+		  cost = 8
+		  x = -7
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_simplifying_bureaucracy
+		}
+
+		completion_reward = {
+        	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_stability = -0.1
+			add_political_power= -50
+        }
+    }
+	focus = {
+		id = GRW_a_peasant_even_in_the_factory
+		 icon = GFX_goal_chn_red_military_factories
+
+		  cost = 8
+		  x = -6
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Every_peasant_highest_duty
+		}
+		prerequisite = {
+		focus = GRW_the_V_regiment_fiefdom
+		}
+
+		completion_reward = {
+		add_stability= -0.1
+        	random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 1
+			category = industry
+		}
+		increase_society_development_with_tt = yes
+        }
+    }
+	focus = {
+		id = GRW_never_forget_our_roots
+		 icon = GFX_goal_RUS_white_legacy
+
+		  cost = 8
+		  x = -4
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Every_peasant_highest_duty
+		}
+		prerequisite = {
+		focus = GRW_rice_bullets_order
+		}
+
+		completion_reward = {
+        add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 1.0
+			uses = 2
+			category = race_tech
+		}
+		decrease_illiteracy = yes
+		add_popularity = { 
+				ideology = fascism
+				popularity = 0.05
+			    }
+        }
+    }
+	focus = {
+		id =GRW_proclamation_of_the_national_Evian_republic 
+		 icon = GFX_goal_national_populism
+
+		  cost = 8
+		  x = -5
+		  y = 7
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_a_peasant_even_in_the_factory
+		}
+		prerequisite = {
+		focus = GRW_never_forget_our_roots
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_the_evian_campaign
+		 icon = GFX_goal_blacksun_invade
+
+		  cost = 2
+		  x = -5
+		  y = 8
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_proclamation_of_the_national_Evian_republic
+		}
+		
+		completion_reward = {
+        add_war_support = 0.05
+		add_popularity = { 
+				ideology = fascism
+				popularity = 0.05
+			    }
+        }
+    }
+	focus = {
+		id =GRW_march_over_lushi
+		 icon = GFX_goal_support_from_lushi
+
+		  cost = 3
+		  x = -8
+		  y = 9
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {NOT= { country_exists= LUS }  }
+
+		ai_will_do = {
+			factor = 2
+		}
+        
+		prerequisite = {
+		focus = GRW_the_evian_campaign
+		}
+		
+        will_lead_to_war_with = LUS
+		
+		completion_reward = {
+        if = {
+		   limit = {country_exists = LUS }
+		   create_wargoal = {
+           type = annex_everything
+           target = LUS
+           }
+        }
+		}
+    }
+	focus = {
+		id =GRW_clear_the_Cossack_scourge
+		 icon = GFX_goal_support_from_GRY
+
+		  cost = 3
+		  x = -5
+		  y = 9
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {NOT= { country_exists= GRY }  }
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_evian_campaign
+		}
+		
+        will_lead_to_war_with = GRY
+		
+		completion_reward = {
+        if = {
+		   limit = {country_exists = GRY }
+		   create_wargoal = {
+           type = annex_everything
+           target = GRY
+           }
+        }
+        }
+    }
+	focus = {
+		id =GRW_end_the_despicable
+		 icon = GFX_goal_berserker_question
+
+		  cost = 3
+		  x = -2
+		  y = 9
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {
+		NOT= { country_exists= GRU }  }
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_evian_campaign
+		}
+		
+		will_lead_to_war_with = GRU
+
+		completion_reward = {
+        if = {
+		   limit = {country_exists = GRU }
+		   create_wargoal = {
+           type = annex_everything
+           target = GRU
+           }
+        }
+        }
+    }
+	focus = {
+		id =GRW_Lushi_finest
+		 icon = GFX_goal_LUS_keep_them_busy
+
+		  cost = 4
+		  x = -9
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+		 LUS = {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		NOT= { country_exists= LUS }  
+		} 
+
+		prerequisite = {
+		focus = GRW_march_over_lushi
+		}
+
+		completion_reward = {
+        add_manpower = 15000
+		every_owned_state = {
+              limit = {
+			  is_core_of= LUS
+			  }
+		add_compliance = 15  
+        }
+		add_ideas= GRW_lushi_auxiliaries
+		}
+    }
+	focus = {
+		id =GRW_the_most_heavy_choice
+		 icon = GFX_goal_LUS_clover
+
+		  cost = 4
+		  x = -7
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+		
+		available = {
+        LUS = {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		NOT= { country_exists= LUS }  
+		} 
+
+		prerequisite = {
+		focus = GRW_march_over_lushi
+		}
+
+		completion_reward = {
+         country_event = prywhen.22
+        }
+    }
+	focus = {
+		id =GRW_hammer_their_strongholds
+		 icon = GFX_HOL_crackdown_natpop
+
+		  cost = 6
+		  x = -5
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		 GRY = {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+		}
+		NOT= { country_exists= GRY }  
+		} 
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_clear_the_Cossack_scourge
+		}
+
+		completion_reward = {
+        613 = { add_manpower= -15000}
+		598= {add_manpower= -7500 }
+		add_equipment_to_stockpile = {
+                      type = infantry_equipment
+                      amount = 1500
+                      producer = GRY
+                }
+		add_war_support= 0.05		
+        }
+    }
+	focus = {
+		id =GRW_toarch_the_seaside
+		 icon = GFX_goal_fire
+
+		  cost = 4
+		  x = -3
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		512= { is_owned_and_controlled_by= ROOT }
+	    514= { is_owned_and_controlled_by= ROOT }
+		NOT= { country_exists= GRU }  
+		} 
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_end_the_despicable
+		}
+
+		completion_reward = {
+        512= { 
+		add_manpower= -30000
+		remove_building = {
+        type = arms_factory
+        level = 1
+        }
+	    remove_building = {
+        type = industrial_complex
+       level = 1
+        }
+		}
+		add_political_power= -75
+	    }
+    }
+	focus = {
+		id =GRW_terminate_the_colonizers_language
+		 icon = GFX_goal_Vest_Seat
+
+		  cost = 4
+		  x = -1
+		  y = 10
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		NOT= { country_exists= GRU }  
+		} 
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_end_the_despicable
+		}
+
+		completion_reward = {
+        every_owned_state = {
+              limit = {
+			  is_core_of= GRU
+			  }
+		add_compliance = 10  
+        }
+		add_political_power = 50
+		add_stability= 0.05
+		add_popularity = { 
+				ideology = fascism
+				popularity = 0.1
+			    }
+        }
+    }
+	focus = {
+		id =GRW_Evi_free_and_unshackled
+		 icon = GFX_ITA_syndicalist_unite
+
+		  cost = 4
+		  x = -5
+		  y = 11
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Lushi_finest
+		}
+        prerequisite = {
+		focus = GRW_the_most_heavy_choice
+		}
+		prerequisite = {
+		focus = GRW_hammer_their_strongholds
+		}
+		prerequisite = {
+		focus = GRW_toarch_the_seaside
+		}
+		prerequisite = {
+		focus = GRW_terminate_the_colonizers_language
+		}
+		
+		completion_reward = {
+        add_political_power= 100
+		add_popularity = { 
+				ideology = fascism
+				popularity = 0.05
+			    }
+        }
+    }
+	focus = {
+		id =GRW_absolute_authority
+		 icon = GFX_goal_authority
+
+		  cost = 4
+		  x = -5
+		  y = 13
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Evi_free_and_unshackled
+		}
+		
+		completion_reward = {
+             swap_ideas = {
+		    remove_idea = GRW_stabilization_efforts_1
+			add_idea = GRW_absolute_authority 
+		}
+        }
+    }
+	focus = {
+		id =GRW_the_peasant_tide
+		 icon = GFX_YAL_peasants_no_longer
+
+		  cost = 7
+		  x = -4
+		  y = 12
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Evi_free_and_unshackled
+		}
+		
+		completion_reward = {
+		add_doctrine_cost_reduction = {
+	     cost_reduction = 1
+	     uses = 2
+	     category = cat_mass_assault
+        }
+		add_war_support= 0.05
+		add_manpower= 100000
+             swap_ideas = {
+		    remove_idea = GRW_Peasant_national_guard_1
+			add_idea = GRW_Peasant_national_guard_2
+		}
+        }
+    }
+	focus = {
+		id =GRW_every_evian_a_peasant
+		 icon = GFX_goal_UESR_TNO_moonspeakers
+
+		  cost = 6
+		  x = -6
+		  y = 12
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Evi_free_and_unshackled
+		}
+		
+		completion_reward = {
+        add_stability = -0.1
+		decrease_illiteracy = yes
+		add_tech_bonus = {
+			name = race_tech_bonus
+			bonus = 0.5
+			uses = 2
+			category = race_tech
+		}
+        }
+    }
+	focus = {
+		id =GRW_a_military_research_board
+		 icon = GFX_goal_JER_pan_socialist_science_committee
+
+		  cost = 7
+		  x = -4
+		  y = 14
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_peasant_tide
+		}
+		
+		completion_reward = {
+        add_tech_bonus = {
+			name = infantry_weapons_bonus
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+		}
+		add_tech_bonus = {
+			name = artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+		add_ideas={ GRW_military_research_board }
+		add_research_slot = 1
+		increase_science_base = yes
+        }
+    }
+	focus = {
+		id =GRW_forge_the_new_griffon
+		 icon = GFX_HIP_raz_youth
+
+		  cost = 7
+		  x = -6
+		  y = 14
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_every_evian_a_peasant
+		}
+		
+		completion_reward = {
+        country_event = prywhen.23
+        }
+    }
+	focus = {
+		id =GRW_The_great_push_west
+		 icon = GFX_goal_generic_attack_griffonstone
+
+		  cost = 4
+		  x = -5
+		  y = 15
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_forge_the_new_griffon
+		}
+		prerequisite = {
+		focus = GRW_a_military_research_board
+		}
+		prerequisite = {
+		focus = GRW_absolute_authority
+		}
+		
+		will_lead_to_war_with= BOI
+		will_lead_to_war_with= BAN
+		will_lead_to_war_with= CYA
+		
+		completion_reward = {
+		custom_effect_tooltip= "§RWE WILL DECLARE OVER ALL THE NATIONS THAT OWN GRIFFONSTONE OR CYANOLISIAN TERRITORY§"
+		hidden_effect = {
+        if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 389
+						}
+						BOI = {
+							owns_state = 389
+						}
+					}
+				}
+			389 = {
+			   owner = {
+               ROOT= {
+			   declare_war_on = {
+       	        target= PREV
+				generator = { 389 }	
+                type = annex_everything
+                } 
+			  } 
+			  }
+			}  
+			  else = {
+				declare_war_on = {
+                target = BOI
+                type = annex_everything
+			    }
+			    }
+            }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 532
+						}
+						BAN = {
+							owns_state = 532
+						}
+					}
+				}
+			532 = {
+			   owner = {
+               ROOT= {
+			   declare_war_on = {
+       	        target= PREV
+				generator = { 532 }	
+                type = annex_everything
+                } 
+			  } 
+			  }
+			}  
+			   else = {
+				declare_war_on = {
+                target = BAN
+                type = annex_everything
+			    }
+			    }
+            }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 507
+						}
+						CYA = {
+							owns_state = 507
+						}
+					}
+				}
+			507 = {
+			   owner = {
+               ROOT= {
+			   declare_war_on = {
+       	        target= PREV
+				generator = { 532 }	
+                type = annex_everything
+                } 
+			  } 
+			  }
+			}  
+			   else = {
+				declare_war_on = {
+                target = CYA
+                type = annex_everything
+			    }
+			    }
+            }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 671
+						}
+						CYA = {
+							owns_state = 671
+						}
+					}
+				}
+			671 = {
+			   owner = {
+               ROOT= {
+			   declare_war_on = {
+       	        target= PREV
+				generator = { 532 }	
+                type = annex_everything
+                } 
+			  } 
+			  }
+			}  
+			   else = {
+				declare_war_on = {
+                target = CYA
+                type = annex_everything
+			    }
+			    }
+            }
+	    }
+		}
+      
+	}  
+	focus = {
+		id =GRW_clean_the_heart
+		 icon = GFX_focus_strike_griffonstone
+
+		  cost = 4
+		  x = -4
+		  y = 16
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		389= { is_owned_and_controlled_by = ROOT}
+		NOT= { country_exists= BOI }  
+        }
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_great_push_west
+		}
+		
+		completion_reward = {
+        389=  { add_manpower= -250000
+		remove_building = {
+        type = arms_factory
+        level = 2
+        }
+	    remove_building = {
+        type = industrial_complex
+        level = 2
+        }
+        }
+		add_victory_points = {
+	    province = 7192
+     	value = -15
+        }
+		 }
+    }
+	focus = {
+		id =GRW_erase_cyanolisian_legacy
+		 icon = GFX_goal_slash_and_burn
+
+		  cost = 4
+		  x = -6
+		  y = 16
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+		
+		available = {
+		671= { is_owned_and_controlled_by = ROOT}
+		NOT= { country_exists= CYA }  
+        }
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_The_great_push_west
+		}
+		
+		completion_reward = {
+		add_political_power= 150
+		add_stability= 0.05
+        671= { add_manpower = -500000 }
+		add_victory_points = {
+	    province = 7342
+     	value = -10
+        }
+		559= { add_manpower= 100000}
+		596= { add_manpower= 50000}
+		597= { add_manpower = 75000}
+		610= { add_manpower = 80000}
+		592= { add_manpower = 35000}
+        }
+    }
+	focus = {
+		id =GRW_bury_the_past
+		 icon = GFX_YAL_bury_the_idol
+
+		  cost = 4
+		  x = -3
+		  y = 17
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_clean_the_heart
+		}
+		
+		completion_reward = {
+        country_event = prywhen.24
+		BOI = { add_to_ROOT_potential_cores = yes }
+        }
+    }
+	focus = { #redo it giving local modifier
+		id =GRW_a_shining_beacon
+		 icon = GFX_goal_sunshine
+
+		  cost = 4
+		  x = -5
+		  y = 17
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_clean_the_heart
+		}
+		prerequisite = {
+		focus = GRW_erase_cyanolisian_legacy
+		}
+		
+		completion_reward = {
+		add_stability= -0.05
+        389= { add_building_construction = {
+            type = arms_factory
+           level = 2
+           instant_build = yes
+          }
+		  add_building_construction = {
+          type = industrial_complex
+          level = 2
+          instant_build = yes
+          }
+		  add_extra_state_shared_building_slots= 4
+		  }
+		  set_capital = {state = 389}
+
+        }
+    }
+	focus = {
+		id =GRW_elighten_the_Minotaurs
+		 icon = GFX_goal_MIT_Red_Bull_Rising
+
+		  cost = 4
+		  x = -7
+		  y = 17
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_clean_the_heart
+		}
+		
+		completion_reward = {
+		army_experience= 50
+        add_stability= 0.05
+		add_popularity = {ideology = fascism popularity = 0.05}
+		add_manpower= 50000
+		add_war_support= 0.05
+		CYA = { add_to_ROOT_potential_cores = yes }
+        }
+    }
+	focus = {
+		id =GRW_fate_of_the_archive
+		 icon = GFX_goal_cry_book
+
+		  cost = 4
+		  x = -6
+		  y = 18
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_elighten_the_Minotaurs
+		}
+		prerequisite = {
+		focus = GRW_a_shining_beacon
+		}
+		
+		completion_reward = {
+         country_event = prywhen.25
+        }
+    }
+	focus = {
+		id =GRW_bandit_auxiliaries
+		 icon = GFX_goal_TBK_band_of_flayers
+
+		  cost = 4
+		  x = -4
+		  y = 18
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_a_shining_beacon
+		}
+		prerequisite = {
+		focus = GRW_bury_the_past
+		}
+		
+		completion_reward = {
+		army_experience= 15
+        add_ideas= GRW_blackrock_bandits
+        }
+    }
+focus = {
+		id =GRW_lake_rumare_expedition
+		 icon = GFX_goal_WNG_lakeside
+
+		  cost = 4
+		  x = -2
+		  y = 19
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_fate_of_the_archive
+		}
+		prerequisite = {
+		focus = GRW_bandit_auxiliaries
+		}
+		
+		will_lead_to_war_with=LAK
+		will_lead_to_war_with=ARA
+		will_lead_to_war_with=ERI
+		will_lead_to_war_with=EYR
+		will_lead_to_war_with=AVI
+		
+		completion_reward = {
+        if = {
+		   limit = {country_exists = LAK }
+		   create_wargoal = {
+           type = annex_everything
+           target = LAK
+           }
+        }
+		if = {
+		   limit = {country_exists = ARA }
+		   create_wargoal = {
+           type = annex_everything
+           target = ARA
+           }
+        }
+		if = {
+		   limit = {country_exists = EYR}
+		   create_wargoal = {
+           type = annex_everything
+           target = EYR
+           }
+        }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 391
+						}
+						EYR = {
+							owns_state = 391
+						}
+					}
+				}
+			391 = {
+			   owner = {
+               ROOT= {
+			   create_wargoal = {
+       	        target= PREV
+				generator = { 391 }	
+                type = take_state
+                } 
+			  } 
+			  }
+			} 
+        }
+		if = {
+		   limit = {country_exists = ERI}
+		   create_wargoal = {
+           type = annex_everything
+           target = ERI
+           }
+        }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 500
+						}
+						ERI = {
+							owns_state = 500
+						}
+					}
+				}
+			500 = {
+			   owner = {
+               ROOT= {
+			   create_wargoal = {
+       	        target= PREV
+				generator = { 500 }	
+                type = take_state
+                } 
+			  } 
+			  }
+			} 
+        }
+		if = {
+		   limit = {country_exists = AVI}
+		   create_wargoal = {
+           type = annex_everything
+           target = AVI
+           }
+        }
+		if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 470
+						}
+						AVI = {
+							owns_state = 470
+						}
+					}
+				}
+			470 = {
+			   owner = {
+               ROOT= {
+			   create_wargoal = {
+       	        target= PREV
+				generator = { 470 }	
+                type = take_state
+                } 
+			  } 
+			  }
+			} 
+        }
+		}
+    }
+	focus = {
+		id =GRW_Free_the_southeners
+		 icon = GFX_goal_generic_attack_wingbardy
+
+		  cost = 4
+		  x = -8
+		  y = 19
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_fate_of_the_archive
+		}
+		prerequisite = {
+		focus = GRW_bandit_auxiliaries
+		}
+		
+		will_lead_to_war_with=SIC
+		will_lead_to_war_with=FRN
+		will_lead_to_war_with=FAL
+		will_lead_to_war_with=TAL
+		will_lead_to_war_with=WNG
+		
+		completion_reward = {
+        if = {
+		   limit = {country_exists = WNG}
+		   create_wargoal = {
+           type = annex_everything
+           target = WNG
+           }
+        }
+		if = {
+		   limit = {country_exists = FAL}
+		   create_wargoal = {
+           type = annex_everything
+           target = FAL
+           }
+        }
+		if = {
+		   limit = {country_exists = FRN}
+		   create_wargoal = {
+           type = annex_everything
+           target = FRN
+           }
+        }
+		if = {
+		   limit = {country_exists = TAL}
+		   create_wargoal = {
+           type = annex_everything
+           target = TAL
+           }
+        }
+		if = {
+		   limit = {country_exists = SIC}
+		   create_wargoal = {
+           type = annex_everything
+           target = SIC
+           }
+        }
+        }
+    }
+	focus = {
+		id =GRW_NOW_no_regrets
+		 icon = GFX_WNG_B_empire
+
+		  cost = 4
+		  x = -5
+		  y = 19
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_fate_of_the_archive
+		}
+		prerequisite = {
+		focus = GRW_bandit_auxiliaries
+		}
+		
+		will_lead_to_war_with=GRI
+		will_lead_to_war_with=FEA
+		will_lead_to_war_with=ROU
+		will_lead_to_war_with=PYT
+		will_lead_to_war_with=STW
+		will_lead_to_war_with=YAL
+		will_lead_to_war_with=ANG
+		will_lead_to_war_with=KAT
+		will_lead_to_war_with=BRZ
+		
+		completion_reward = {
+		  if = {
+				limit = {
+					NOT = {
+						ROOT = {
+							owns_state = 382
+						}
+						GRI = {
+							owns_state = 382
+						}
+					}
+				}
+			382 = {
+			   owner = {
+               ROOT= {
+			   declare_war_on = {
+       	        target= PREV
+				generator = { 389 }	
+                type = annex_everything
+                } 
+			  } 
+			  }
+			}  
+			  else = {
+				declare_war_on = {
+                target = GRI
+                type = annex_everything
+			    }
+			    }
+            }
+		if = {
+			limit = {
+				YAL = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = YAL}
+		}
+		if = {
+			limit = {
+				ROU = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = ROU}
+		}
+		if = {
+			limit = {
+				ANG = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = ANG }
+		}
+		if = {
+			limit = {
+				KAT = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = KAT }
+		}
+		if = {
+			limit = {
+				BRZ = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = BRZ }
+		}
+		if = {
+			limit = {
+				STW = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = STW }
+		}
+		if = {
+			limit = {
+				PYT = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = PYT }
+		}
+		if = {
+			limit = {
+				FEA = {
+					exists = yes
+					NOT = {
+						is_subject_of = ROOT
+						has_war_with = ROOT
+					}
+				}
+			}
+			declare_war_on = { type = annex_everything target = FEA }
+		}
+        }
+    }
+	focus = {
+		id =GRW_Verenian_squabbles
+		 icon = GFX_goal_reaffirm_royal_sovereignty
+
+		  cost = 4
+		  x = -3
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_lake_rumare_expedition
+		}
+		
+		completion_reward = {
+		add_political_power= -50
+        AVI = { add_to_ROOT_potential_cores = yes }
+		ERI = { add_to_ROOT_potential_cores = yes }
+		EYR = { add_to_ROOT_potential_cores = yes }
+        }
+    }
+	focus = {
+		id =GRW_land_of-the_conqueror
+		 icon = GFX_goal_generic_attack_arantiga
+
+		  cost = 4
+		  x = -1
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_lake_rumare_expedition
+		}
+		
+		completion_reward = {
+		add_political_power= -75
+        ARA = { add_to_ROOT_potential_cores = yes }
+        }
+    }
+	focus = {
+		id =GRW_a_spot_for_the_rumareans
+		 icon = GFX_WholesomeRumare
+
+		  cost = 4
+		  x = -2
+		  y = 21
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_lake_rumare_expedition
+		}
+		
+		available = {
+		LAK= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		}
+		
+		
+		completion_reward = {
+        every_owned_state= {
+              limit = {
+			  is_core_of= LAK
+			  }
+		add_dynamic_modifier = { modifier = LUS_Reservation }
+		add_core_of =ROOT
+        }
+		}
+    }
+	focus = {
+		id =GRW_united_peasants_of_sicameon
+		 icon = GFX_focus_sic_communism_flag
+
+		  cost = 4
+		  x = -7
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Free_the_southeners
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_deurbanize_karthinia
+		 icon = GFX_goal_generic_rice_field
+
+		  cost = 4
+		  x = -9
+		  y = 21
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Free_the_southeners
+		}
+		
+		available = {
+		WNG= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		FAL= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		TAL= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		FRN= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		SIC= {
+        all_core_state = {
+        is_owned_and_controlled_by = ROOT
+        }
+        }
+		}
+		
+		completion_reward = {
+        country_event= prywhen.26 
+        }
+    }
+	focus = {
+		id =GRW_send_them_to_tartarus
+		 icon = GFX_goal_tobuck_burning
+
+		  cost = 4
+		  x = -5
+		  y = 20
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_NOW_no_regrets
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_Herzland_no_more
+		 icon = GFX_goal_JER_herzlandish_provincialism
+
+		  cost = 4
+		  x = -5
+		  y = 21
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_send_them_to_tartarus
+		}
+		
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_Griffonia_grateful
+		 icon = GFX_goal_GRF_troubles_begin
+
+		  cost = 4
+		  x = -5
+		  y = 22
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_Herzland_no_more
+		}
+
+		completion_reward = {
+
+        }
+    }
+	
+	
+	#Theresa industry tree#
+	
+	focus = {
+		id =GRW_deal_with_the_machine_devil
+		 icon = GFX_goal_SZC_improvised_farming_machinery
+
+		  cost = 6 
+		  x = -2
+		  y = 3
+		 relative_position_id= GRW_Theresa_takeover
+
+		available = {
+		has_completed_focus = GRW_our_own_mission
+        }
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_first_national_peasant_state
+		}
+
+		completion_reward = {
+           swap_ideas = {
+		    remove_idea = GRW_post_civil_war_economy
+			add_idea = GRW_ministry_of_industry 
+		}
+        }
+    }
+	focus = {
+		id =GRW_peasants_schools
+		 icon = GFX_goal_griffon_schools
+
+		  cost = 7
+		  x = 0
+		  y = 3
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_first_national_peasant_state
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_importing_foreign_cheap_hardware
+		 icon = GFX_goal_break_into_the_electronic_industry
+
+		  cost = 6 
+		  x = -1
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_peasants_schools
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_first_industrial_complexes
+		 icon = GFX_goal_stg_socialist_industry
+
+		  cost = 6 
+		  x = 1
+		  y = 4
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_peasants_schools
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_enstablish_peasant_industrial_unions
+		 icon = GFX_goal_socialist_industry
+
+		  cost = 6 
+		  x = 0
+		  y = 5
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_first_industrial_complexes
+		}
+		prerequisite = {
+		focus = GRW_importing_foreign_cheap_hardware
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_National_industry_board
+		 icon = GFX_goal_improve_industry
+
+		  cost = 8
+		  x = -2
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_deal_with_the_machine_devil
+		}
+		prerequisite = {
+		focus = GRW_rice_bullets_order
+		}
+
+		completion_reward = {
+           swap_ideas = {
+		    remove_idea = GRW_ministry_of_industry 
+			add_idea = GRW_national_industrial_board 
+		}
+        }
+    }
+	focus = {
+		id =GRW_our_benefactor_gifts
+		 icon = GFX_goal_Three_Questions
+
+		  cost = 6 
+		  x = 2
+		  y = 3
+		 relative_position_id= GRW_Theresa_takeover
+
+		available = {
+		has_completed_focus = GRW_our_benefactor_calls
+        }
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_first_national_peasant_state
+		}
+
+		completion_reward = {
+          swap_ideas = {
+		    remove_idea = GRW_post_civil_war_economy
+			add_idea = GRW_our_benefactor_gifts
+		} 
+        }
+    }
+	focus = {
+		id =GRW_farms_into_manifacturies
+		 icon = GFX_goal_GRI_mechfarming
+
+		  cost = 6 
+		  x = 0
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+
+		available = {
+		has_completed_focus = GRW_our_benefactor_calls
+        }
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_enstablish_peasant_industrial_unions
+		}
+
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_the_evian_standard
+		 icon = GFX_YAL_cooperative_farms_and_mines
+
+		  cost = 6 
+		  x = 2
+		  y = 6
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_our_benefactor_gifts
+		}
+		prerequisite = {
+		focus =GRW_adapt_reicharmee_model
+        }
+		
+		completion_reward = {
+          swap_ideas = {
+		    remove_idea = GRW_our_benefactor_gifts
+			add_idea = GRW_copy_herzland_model
+		} 
+        }
+    }
+	focus = {
+		id =GRW_the_spark_of_industry
+		 icon = GFX_goal_expand_state_industry
+
+		  cost = 6 
+		  x = 0
+		  y = 7
+		 relative_position_id= GRW_Theresa_takeover
+		
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus = GRW_the_evian_standard
+		focus=GRW_National_industry_board
+		}
+		prerequisite = {
+		focus =GRW_farms_into_manifacturies
+        }
+		completion_reward = {
+
+        }
+    }
+	focus = {
+		id =GRW_full_economic_revolution
+		 icon = GFX_goal_cry_com_industry
+
+		  cost = 6 
+		  x = 0
+		  y = 8
+		 relative_position_id= GRW_Theresa_takeover
+
+		bypass = {}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		prerequisite = {
+		focus =GRW_the_spark_of_industry
+        }
+		
+		completion_reward = {
+		custom_effect_tooltip = "Our economy will be fully reformed"
+        if= { 
+		limit = {
+		has_idea  = GRW_copy_herzland_model
+		}
+		   swap_ideas = {
+		    remove_idea = GRW_copy_herzland_model 
+			add_idea = GRW_copy_herzland_model_end
+		}
+        }
+		if= { 
+		limit = {
+		has_idea  = GRW_national_industrial_board 
+		}
+		   swap_ideas = {
+		    remove_idea = GRW_national_industrial_board  
+			add_idea = GRW_national_industrial_board_end
+		}
+        }
+    }
+    }
+}	

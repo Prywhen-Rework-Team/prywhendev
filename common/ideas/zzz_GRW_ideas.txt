@@ -1,0 +1,1226 @@
+ideas = {
+    country = {
+		GLA_Divided = {
+			picture = GLA_divided
+			
+			allowed = {
+				always = no
+				tag = GRW
+			}
+		    
+			modifier = {
+        	    political_power_gain = -0.25
+			    custom_modifier_tooltip = SPR_military_disloyalty_tt
+				fascism_drift = 0.03
+				democratic_drift = 0.02
+				neutrality_drift = 0.02
+            } 
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power = 1
+			}
+		}
+		
+        GRW_post_civil_war_economy = {
+			picture = great_depression
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       monthly_population = -0.20
+		       industrial_capacity_dockyard = -0.50
+		       industrial_capacity_factory = -0.25
+		       consumer_goods_factor = 0.20
+			   line_change_production_efficiency_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		} 
+		
+		GRW_divided_government = {
+			picture = STG_war_communism
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = -0.50
+		       stability_factor = -0.30
+		       war_support_factor = -0.30
+		      consumer_goods_factor= 0.05
+           }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_Beheaded_army = {
+			picture = griffon_army_unhappy
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       conscription_factor = -0.4
+		       land_reinforce_rate = -0.05
+		       war_support_factor = -0.2
+		      army_org_factor = -0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+	#Republican ideas
+		
+	    GRW_economy_recovery_1 = {
+			picture = great_depression
+			removal_cost = -1
+
+			allowed = {
+				tag = GRW  }
+         modifier = {
+		       monthly_population = -0.15
+		       industrial_capacity_dockyard = -0.40
+		       industrial_capacity_factory = -0.20
+		       consumer_goods_factor = 0.15
+			   line_change_production_efficiency_factor = -0.04
+            }
+	    allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+	GRW_economy_recovery_2 = {
+			picture = great_depression
+			removal_cost = -1
+
+			allowed = {
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       monthly_population = -0.10
+		       industrial_capacity_dockyard = -0.30
+		       industrial_capacity_factory = -0.10
+		       consumer_goods_factor = 0.10
+			   line_change_production_efficiency_factor = -0.02
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+	GRW_economy_recovery_3 = {
+			picture = great_depression
+		
+			removal_cost = -1
+
+			allowed = {
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       monthly_population = -0.05
+		       industrial_capacity_dockyard = -0.10
+		       industrial_capacity_factory = -0.05
+		       consumer_goods_factor = 0.05
+			   line_change_production_efficiency_factor = -0.01
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+		
+		#Theresa ideas
+		
+		GRW_stabilization_efforts = {
+			picture = broken_resistance
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = -0.20
+		       stability_factor = -0.05
+		       war_support_factor = -0.15
+		      consumer_goods_factor= 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_Peasant_national_guard = {
+			picture = MEX_politicised_army
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       conscription_factor = -0.2
+		       land_reinforce_rate = -0.05
+		       war_support_factor = -0.05
+		       army_org_factor = -0.1
+			  conscription= 0.01
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		#industry
+		
+		GRW_ministry_of_industry = {
+			picture = man_five_year_plan_industry
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      monthly_population = -0.20
+		      industrial_capacity_dockyard = -0.20
+		      industrial_capacity_factory = -0.05
+		      consumer_goods_factor = 0.10
+			  production_speed_buildings_factor= 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		} 
+		
+		GRW_national_industrial_board = {
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      monthly_population = 0.2
+		      industrial_capacity_dockyard = -0.15
+		      industrial_capacity_factory = 0.1
+		      consumer_goods_factor = 0.05
+			  production_speed_buildings_factor= 0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		} 
+		
+		GRW_national_industrial_board_end = {
+			picture =man_five_year_plan_tank
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  political_power_gain= -0.1
+		      monthly_population = 0.1
+		      industrial_capacity_dockyard = -0.05
+		      industrial_capacity_factory = 0.20
+			  production_speed_buildings_factor = 0.15
+			  production_speed_industrial_complex_factor = 0.1
+		      consumer_goods_factor = 0.1
+			  line_change_production_efficiency_factor= 0.05
+			  production_factory_max_efficiency_factor= 0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		} 
+		
+		GRW_peasant_factories = {
+			picture = STG_collectivization_effort
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      stability_factor = -0.05
+			  industrial_capacity_factory= 0.05
+			  production_speed_buildings_factor= 0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_Peasant_unions = {
+			picture =tur_etatism
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+            stability_factor=0.05
+			production_speed_buildings_factor= 0.05
+			fascism_drift = 0.05
+			equipment_bonus = {
+			infantry= {
+			build_cost_ic = -0.1
+                    }
+			artillery= {
+			build_cost_ic = -0.1
+	                }
+			}
+			}
+			
+          allowed_civil_war = {
+			always = yes
+		   }
+		} 
+		
+		GRW_Peasant_schools = {
+			picture =jap_the_unthinkable_option
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+            research_speed_factor = -0.05
+		    political_power_gain= 0.1
+			communism_drift = 0.01
+			fascism_drift = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+		GRW_our_benefactor_gifts = {
+			picture =IRE_medium_industry
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      monthly_population = -0.15
+		      industrial_capacity_dockyard = -0.25
+		      consumer_goods_factor = 0.05
+			  production_speed_buildings_factor= -0.05
+			  line_change_production_efficiency_factor= -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+		GRW_copy_herzland_model = {
+			picture =IRE_medium_industry
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      monthly_population = -0.05
+		      industrial_capacity_dockyard = -0.3
+			  production_speed_buildings_factor= 0.05
+			  line_change_production_efficiency_factor= -0.1
+			  production_factory_max_efficiency_factor= 0.05
+			  industrial_capacity_factory = 0.10
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		GRW_copy_herzland_model_end = {
+			picture =IRE_heavy_industry
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      monthly_population = 0.1
+		      industrial_capacity_dockyard = -0.25
+			  production_speed_buildings_factor= 0.15
+			  line_change_production_efficiency_factor= -0.15
+			  production_factory_max_efficiency_factor= 0.15
+			  industrial_capacity_factory = 0.15
+			  consumer_goods_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }
+		}
+		
+		
+		#theresa indipendent#
+		
+		GRW_Peasant_national_guard_1 = {
+			picture = MEX_politicised_army
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       conscription_factor = 0.1
+		       land_reinforce_rate = 0.05
+		       war_support_factor =  0.05
+		       army_org_factor = -0.1
+			  conscription= 0.015
+			  army_attack_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_Peasant_national_guard_2 = {
+			picture = MEX_revolutionary_army
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       conscription_factor = 0.20
+		       land_reinforce_rate = 0.1
+		       war_support_factor =  0.05
+		       army_org_factor = -0.05
+			  conscription= 0.02
+			  army_attack_factor = 0.1
+			  attrition = -0.05
+			  army_morale_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_stabilization_efforts_1 = {
+			picture = generic_deal_with_the_devil
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = -0.1
+		       stability_factor =  0.05
+		       war_support_factor =  -0.05
+		      consumer_goods_factor= 0.025
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_every_peasant_duty = {
+			picture = STG_collectivization_effort
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       stability_factor =  0.05
+		       war_support_factor =  0.1
+		      drift_defence_factor = 0.35
+			  army_defence_factor = 0.05
+			  political_advisor_cost_factor = 0.15
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_the_new_griffon = {
+			picture = STG_collectivization_effort
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      war_support_factor =  0.1
+		      drift_defence_factor = 0.5
+			  consumer_goods_factor= -0.05
+			  army_defence_factor = 0.05
+			  production_speed_buildings_factor= 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_lushi_auxiliaries = {
+			picture = griffon_army3
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      stability_factor = -0.05
+			  conscription_factor = 0.05
+			  army_morale_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_absolute_authority = {
+			picture = german_advisors
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = 0.05
+		       stability_factor =  0.1
+			   conscription= 0.01
+			   army_attack_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_military_research_board = {
+			picture = generic_deadly_research_bonus
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+            #research_bonus = { race_tech = 0.1 }
+
+            research_bonus = {
+				infantry_weapons = 0.1
+				artillery = 0.1
+			}
+             modifier = {
+		       political_power_gain = -0.1
+		       stability_factor =  -0.05
+			  army_speed_factor = 0.05
+			  research_speed_factor= -0.05
+			}
+	
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_griffonstone_archive = {
+			picture = GRW_opened_up_schools
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  research_speed_factor= 0.05
+			  political_power_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_The_griffonstone_example = {
+			picture = NOR_secret_police_spirit
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			 fascism_drift = 0.1
+			 war_support_factor= 0.05
+			 resistance_target = -0.05 
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_blackrock_bandits = {
+			picture = generic_intel_bonus
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      political_power_gain = -0.05
+			  army_morale_factor= 0.05
+			  conscription_factor= 0.1
+			  stability_factor= -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_Rumare_reservation = {
+			picture = lau_plantation_idea
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      political_power_gain = 0.05
+			  conscription_factor= 0.1
+			  stability_factor= 0.05
+			  special_forces_cap = 0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		WNG_the_southern_utopia = {
+			picture = lau_plantation_idea
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      political_power_gain = 0.05
+			  conscription_factor= 0.1
+			  stability_factor= 0.1
+			   monthly_population = -0.1
+		      industrial_capacity_dockyard = -0.25
+			  production_speed_buildings_factor= -0.15
+			  line_change_production_efficiency_factor= -0.15
+			  production_factory_max_efficiency_factor= -0.1
+			  industrial_capacity_factory = -0.2
+			  consumer_goods_factor = -0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		#Theresa love story
+		
+		GRW_blind_loyalty = {
+			picture = FRA_scw_intervention_nationalists_focus
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = 0.1
+		       stability_factor = 0.1
+		       war_support_factor = -0.1
+		       consumer_goods_factor= 0.1
+           }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_Higher_cause = {
+			picture = FRA_scw_intervention_nationalists_focus
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       political_power_gain = 0.3
+		       stability_factor = 0.1
+		       war_support_factor = 0.05
+		       consumer_goods_factor= -0.05
+           }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		} 
+		
+		GRW_lushi_auxilia = {
+			picture = griffon_army3
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		       conscription_factor = 0.1
+		       land_reinforce_rate = 0.05
+		      conscription= 0.01
+			  army_org_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_increase_numbers = {
+			picture = WNG_redwings
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+		      conscription_factor = 0.15
+		      conscription= 0.02
+			  army_org_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_reicharmee_copycat = {
+			picture = GRI_hat
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = -0.2
+		       conscription_factor = -0.3
+		       land_reinforce_rate = 0.05
+		       war_support_factor = -0.2
+		      army_org_factor = -0.05
+			  army_attack_factor = 0.05
+			  army_defence_factor= 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_imperial_marke = {
+			picture = HLQ_knights
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  political_power_gain = -0.2
+		      conscription_factor = -0.35
+		      land_reinforce_rate = 0.1
+		      war_support_factor = 0.05
+		      army_org_factor = 0.1
+			  army_attack_factor = 0.05
+			  army_defence_factor= 0.05
+			  modifier_army_sub_unit_knights_attack_factor = 0.10
+			  modifier_army_sub_unit_knights_defence_factor = 0.10
+			  special_forces_min = 36
+			}
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_imperial_marke_2 = {
+			picture = HLQ_knights
+		
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  political_power_gain = -0.1
+		      conscription_factor = -0.5
+			  conscription= 0.01
+		      land_reinforce_rate = 0.15
+		      war_support_factor = 0.1
+		      army_org_factor = 0.15
+			  army_attack_factor = 0.10
+			  army_defence_factor= 0.05
+			  modifier_army_sub_unit_knights_attack_factor = 0.2
+			  modifier_army_sub_unit_knights_defence_factor = 0.15
+			  special_forces_min = 48
+			}
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_commissars_for_red_knights = {
+			picture = BAL_officer
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   army_org_factor = 0.05
+		      conscription = 0.005
+			   army_speed_factor= 0.05
+			   army_morale_factor= 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_Red_knights = {
+			picture = BAL_officer
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   army_org_factor = -0.15
+		       conscription = 0.005
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_gri_industrialetaat = {
+			picture = tur_etatism
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = -0.1
+		       industrial_capacity_factory = 0.1
+			   consumer_goods_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}  
+		
+		GRW_optimization_of_industry = {
+			picture = tur_etatism_bonus
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = -0.2
+		       industrial_capacity_factory = 0.15
+			   consumer_goods_factor = -0.05
+			   stability_factor= -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_imperial_free_cities = {
+			picture = Generic_Cities_Free
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = 0.15
+		       production_factory_max_efficiency_factor= 0.1
+			   consumer_goods_factor = -0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_nimbussian_free_cities = {
+			picture = Generic_Cities_Free
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = 0.2
+		       production_factory_max_efficiency_factor= 0.15
+			   consumer_goods_factor = -0.075
+			   roduction_speed_buildings_factor = 0.05
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_riverlandian_conscription = {
+			picture =chi_forced_conscription
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  conscription_factor = 0.25
+			  conscription= 0.01
+		      land_reinforce_rate = -0.05
+			 army_morale_factor = 0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		RCT_riverlandian_conscription = {
+			picture =chi_forced_conscription
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			  conscription_factor = -0.25
+			  conscription= -0.01
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		GRW_herzland_lifeline = {
+			picture = Generic_bank_idea_icon
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+
+		    modifier = {
+			   political_power_gain = -0.1
+		       industrial_capacity_factory = 0.05
+			   industrial_factory_donations = 5
+			   stability_factor= -0.1
+            }
+	 
+          allowed_civil_war = {
+			always = yes
+		   }   
+		}
+		
+		
+		
+		Risk_Of_Famine = {
+			picture = famine_start
+			
+			allowed = {
+				always = no
+				tag = GRW
+			}
+		    modifier = {} 
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+		
+		}
+		
+	    Risk_Of_Famine_2 = {
+			picture = famine_start
+			
+			allowed = {
+				always = no
+				tag = GRW
+			}
+		    modifier = {
+		       political_power_gain = -0.25
+		       stability_factor = -0.10
+		       war_support_factor = -0.10
+		      consumer_goods_factor = 0.10
+		    } 
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power = 1
+			}
+		}
+		
+		grw_the_great_push = {
+			picture = 
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+			on_remove = {
+                NOT = {
+                    has_war = yes
+                }
+            }
+        
+		    modifier = {
+			  political_power_gain = -0.30
+			  army_attack_factor = 0.10
+			  army_defence_factor = 0.10
+			  attrition = -0.10
+
+		    } 
+		}
+		
+		grw_stupid_cowards = {
+			picture = 
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no
+				tag = GRW
+			}
+
+			on_remove = {
+                NOT = {
+                    has_war = yes
+                }
+            }
+
+		    modifier = {
+			  army_attack_factor = -0.10
+			  army_defence_factor = -0.10
+			  attrition = 0.10
+
+		    } 
+
+		    allowed_civil_war = {
+			  always = yes
+		    }
+	    }
+	}
+}

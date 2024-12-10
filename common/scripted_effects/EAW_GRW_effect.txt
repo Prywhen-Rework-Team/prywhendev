@@ -1,0 +1,26 @@
+ GRW_reduce_civil_war_recovery = {
+	if = {
+		limit = {
+			has_idea = GRW_economy_recovery_1
+		}
+		swap_ideas = {
+			remove_idea = GRW_economy_recovery_1
+			add_idea = GRW_economy_recovery_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = GRW_economy_recovery_2
+		}
+		swap_ideas = {
+			remove_idea = GRW_economy_recovery_2
+			add_idea = GRW_economy_recovery_3
+		}
+	}
+	else_if = {
+        limit = {
+            has_idea = GRW_economy_recovery_3
+        }
+        remove_ideas = GRW_economy_recovery_3
+    }
+          }
