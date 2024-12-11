@@ -1,25 +1,40 @@
 ﻿l_russian:
 #focus
- GRW_preperation_for_great_push:0 "Подготовка к последнему толчку"
- GRW_preperation_for_great_push_desc:0 "Прошло 4 года с тех пор, как тиран начал это кровопролитие, но мы одержали победу и оттеснили его войска обратно к крупным городам, и все же нам нужно покончить с ними как можно быстрее, пока не разразился новый голод."
- GRW_ask_river_fed:0 "Seek aid from the Riverlands"
- GRW_ask_river_fed_desc:0 "Despite not having a major presence in the Riverlands, socialist groups in the Riverlands have a presence in Wittenland and the River Republic, especially the River latter. It would be a wise move to ask them for aid in our struggle against the Tyrant King."
- GRW_ask_internationalists:0 "Rally the International Brigades" 
- GRW_ask_internationalists_desc:0 "International Brigades are a communist foreign legion that seeks to overthrow tyrant regimes across the world. They have been helping us since 1004, we better tell them to prepare themselves for the final push."
- GRW_ask_help_from_herzland:0 "Seek aid from the Herzland"
- GRW_ask_help_from_herzland_desc:0 "The Herzland is the heart of Griffonian imperialism, and with very little socialist or even republican presence, our chance of recieving help from them is very low, but we have to try if we want to be prepared for final push."
- GRW_ask_MKE:0 "Seek aid from the MKO"
+ GRW_preperation_for_great_push:0 "Подготовка к последнему походу"
+ GRW_preperation_for_great_push_desc:0 "Прошло 4 года с тех пор, как тиран начал это кровопролитие, но мы одержали победу и оттеснили его войска обратно к крупным городам, но все же нам нужно как можно скорее покончить с ним, пока не разразился новый голод.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ТАБОРИТСКИЙ ТНО ШИЗА ГУГУГАГА КЕРЕЕШКЕ МЕДНЫЙ БЫК ПАСХАЛКО 1488 ФЕДОРУ ПРИВЕТ"
+ GRW_ask_river_fed:0 "Обратиться за помощью к Речным землям"
+ GRW_ask_river_fed_desc:0 "Несмотря на отсутствие значительного преимущества в Речных землях, социалистические группы в Речных землях все таки есть в Виттенленде и Речной республике, особенно в последней. Было бы мудрым шагом обратиться к ним за помощью в нашей борьбе против короля тирана."
+ GRW_ask_internationalists:0 "Соберите Интернациональные бригады" 
+ GRW_ask_internationalists_desc:0 "Интернациональные бригады - это коммунистический иностранный легион, который стремится свергнуть тиранические режимы по всему миру. Они помогают нам с 1004 года, нам лучше сказать им, чтобы они готовились к последнему походу."
+ GRW_ask_help_from_herzland:0 "Обратиться за помощью к Герцландии"
+ GRW_ask_help_from_herzland_desc:0 "Герцланд - это сердце гриффонского империализма, и при очень слабом присутствии социалистов или даже республиканцев наши шансы получить от них помощь очень малы, но мы должны попытаться, если хотим быть готовыми к последнему походу."
+ GRW_ask_MKE:0 "Обратиться за помощью к МХО"
  GRW_ask_MKE_desc:0 "Mojahedin-e-Khalq Organizatia is the second most popular socialist group within the GLA, and having them support our great push will increase our chance of victory heavily."
- GRW_impower_CGU:0 "Empower the CGU"
+ GRW_impower_CGU:0 "Расширить возможности ЕОГ"
  GRW_impower_CGU_desc:0 "Common Griffon Unity is the most popular group in GLA, effectively the foundation of the GLA itself, even most MKO members are part of CGU, with giving their troops new guns and fresh recruits, they will be prepared to finish our struggle for liberation."
- GRW_seize_privet_property:0 "Seize private properties"
- GRW_seize_privet_property_desc:0 "With the lack of guns and shortage of food,we need to do anything we can to ensure that we won't get low on guns and foods before final push starts,we better start this by seizing private properties from land owners, they are no different than monarchs after all."
+ GRW_seize_privet_property:0 "Захват частной собственности"
+ GRW_seize_privet_property_desc:0 "Учитывая нехватку оружия и продовольствия, мы должны сделать все, что в наших силах, чтобы гарантировать, что у нас не будет недостатка в оружии и продовольствии до того, как начнется последний поход, нам лучше начать с захвата частной собственности у землевладельцев, в конце концов, они ничем не отличаются от монархов."
  GRW_increase_V_regiment_power:0 "Increase V Regiment power"
  GRW_increase_V_regiment_power_desc:0 "V Regiment is Theresa's handy work, this regiments were trained under Theresa herself, they by far are the most professional soldiers in the whole GLA, even international brigades from Stalliongrad can't compare to them, providing them guns and plenty of resources gives them enough power to push the monarchists all the way to the sea."
- GRW_ask_republicans:0 "Petition Republicans"
- GRW_ask_republicans_desc:0 "Since 978, you can find republicans everywhere in griffonia, they have some contacts in Equestria willing to send them aid, meaning allyingwith them will help us in the final push against the tyrant."
- GRW_ask_sea_raiders:0 "Seek Pirate Cooperation"
- GRW_ask_sea_raiders_desc:0 "Sea banditry was always a thing, even in days of Empire, but with the start of the civil war, most of royal navy ships and personnel went rogue and started their own pirate groups, if we convince them to help us in the Great Push, the imperialists won't be able to escape the peasants' wrath via sea."
+ GRW_ask_republicans:0 "Петиция республиканцев"
+ GRW_ask_republicans_desc:0 "Начиная с 978 года, республиканцев в Гриффонии можно встретить повсюду, у них есть контакты в Эквестрии, которые готовы прислать им помощь, а это значит, что союз с ними поможет нам в решающей битве с тираном."
+ GRW_ask_sea_raiders:0 "Добиваться сотрудничества с пиратами"
+ GRW_ask_sea_raiders_desc:0 "Морской бандитизм всегда был в моде, даже во времена империи, но с началом гражданской войны большинство кораблей и персонала королевского военно-морского флота вышли из под контроля и создали свои собственные пиратские группировки. Если мы убедим их помочь нам в Великом походе, империалисты не смогут спастись от гнева крестьян через моря."
  GRW_coordination_between_fighters:0 "Coordination inside GLA"
  GRW_coordination_between_fighters_desc:0 "It's a sad truth that most groups inside the GLA are prone to infighting, and violence frequently breaks out between them in the streets. But we have to work together when we are only a step away from Victory, by increasing cooperation and convincing them to help each other, our path to victory will be secured!"
  GRW_reorgnizing_melitias:0 "Reorgnize GLA Militias"
