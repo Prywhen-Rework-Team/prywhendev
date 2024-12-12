@@ -12,7 +12,7 @@ focus_tree = {
 		focus = {
 		id = GRW_preperation_for_great_push
 
-		 icon = GFX_goal_DOM_The_Phoenix
+		 icon = phoneix_rise
 
 		 cost = 4
 		  x = 9
