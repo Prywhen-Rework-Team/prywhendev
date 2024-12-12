@@ -122,6 +122,10 @@ spriteTypes = {
 		name = "GFX_Phoniex_rise"
 		texturefile = "gfx/interface/goals/Phoniex_Rebirth.dds"
 	}
+	SpriteType = {
+		name = "GFX_preperation_for_great_push"
+		texturefile = "gfx/interface/goals/preperation_for_great_push.dds"
+	}
 
 	#### Equestria At War
 
