@@ -1,6 +1,6 @@
-version="1.15.1"
+version="0.5"
 tags={
 	"Alternative History"
 }
-name="prywhen"
-supported_version="1.15.1"
+name="Prywhen Rework"
+supported_version="1.16.0"
