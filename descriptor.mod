@@ -1,6 +1,9 @@
-version="0.5"
+version="1"
 tags={
 	"Alternative History"
 }
 name="Prywhen Rework"
-supported_version="1.16.0"
+dependencies={
+	"Equestria at War"
+}
+supported_version="1.15.*"
